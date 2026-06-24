@@ -5,8 +5,8 @@ import { Menu, X } from "lucide-react";
 
 const NAV = [
   { label: "Services", href: "/Global-logistics/services" },
-  { label: "About", href: "#about" },
-  { label: "Contact", href: "mailto:info@globelogisticoman.com" },
+  { label: "About", href: "/Global-logistics/about" },
+  { label: "Contact", href: "/Global-logistics/contact" },
 ];
 
 export default function Navbar() {

@@ -34,7 +34,7 @@ export default function ServicesIntro() {
             Complete logistics solutions tailored to your business needs.
           </p>
           <a
-            href="/services"
+            href="/Global-logistics/services"
             style={{ display: "inline-flex", alignItems: "center", gap: 8, color: "#0066FF", fontWeight: 600, fontSize: 15, textDecoration: "none", transition: "gap 0.3s" }}
             onMouseEnter={e => (e.currentTarget.style.gap = "16px")}
             onMouseLeave={e => (e.currentTarget.style.gap = "8px")}
@@ -48,7 +48,7 @@ export default function ServicesIntro() {
           {SERVICES.map((s, i) => (
             <motion.a
               key={s.name}
-              href="/services"
+              href="/Global-logistics/services"
               initial={{ opacity: 0, y: 24 }}
               animate={inView ? { opacity: 1, y: 0 } : {}}
               transition={{ duration: 0.5, delay: i * 0.08 }}

@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X } from "lucide-react";
 
 const NAV = [
-  { label: "Services", href: "/services" },
+  { label: "Services", href: "/Global-logistics/services" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "mailto:info@globelogisticoman.com" },
 ];
@@ -40,7 +40,7 @@ export default function Navbar() {
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px", height: "100%", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
 
           {/* Logo */}
-          <a href="/" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
+          <a href="/Global-logistics/" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
             <div style={{ width: 32, height: 32, borderRadius: 8, background: "linear-gradient(135deg,#0066FF,#38BDF8)", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <svg viewBox="0 0 18 18" fill="none" width="16" height="16">
                 <circle cx="9" cy="9" r="7.5" stroke="white" strokeWidth="1.4"/>

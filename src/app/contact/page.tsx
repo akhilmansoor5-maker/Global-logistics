@@ -40,8 +40,8 @@ export default function Contact() {
                   <div style={{ fontSize: 14, fontWeight: 600, color: "#0066FF", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 8 }}>
                     Email
                   </div>
-                  <a href="mailto:info@globelogisticoman.com" style={{ fontSize: 18, color: "#0A1929", textDecoration: "none", fontWeight: 600 }}>
-                    info@globelogisticoman.com
+                  <a href="mailto:sales@ols-oman.com" style={{ fontSize: 18, color: "#0A1929", textDecoration: "none", fontWeight: 600 }}>
+                    sales@ols-oman.com
                   </a>
                 </div>
 
@@ -77,7 +77,7 @@ export default function Contact() {
                   Send us your shipment details and we'll provide a customized quote within 24 hours.
                 </p>
                 <a
-                  href="mailto:info@globelogisticoman.com?subject=Freight%20Quote%20Request&body=Hello%20Globe%20Logistic%2C%0A%0AI%20would%20like%20to%20request%20a%20quote%20for%20the%20following%20shipment%3A%0A%0AShipment%20Details%3A%0AOrigin%3A%0ADestination%3A%0AWeight%3A%0ACargo%20Type%3A%0APreferred%20Mode%3A%0ARequired%20Date%3A%0A%0AThank%20you%2C"
+                  href="mailto:sales@ols-oman.com?subject=Freight%20Quote%20Request&body=Hello%20Globe%20Logistic%2C%0A%0AI%20would%20like%20to%20request%20a%20quote%20for%20the%20following%20shipment%3A%0A%0AShipment%20Details%3A%0AOrigin%3A%0ADestination%3A%0AWeight%3A%0ACargo%20Type%3A%0APreferred%20Mode%3A%0ARequired%20Date%3A%0A%0AThank%20you%2C"
                   style={{ display: "inline-flex", alignItems: "center", gap: 10, background: "#0066FF", color: "#fff", fontWeight: 700, fontSize: 16, padding: "16px 32px", borderRadius: 8, textDecoration: "none", boxShadow: "0 4px 16px rgba(0,102,255,0.2)" }}
                 >
                   Email Us Now

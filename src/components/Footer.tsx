@@ -87,12 +87,9 @@ export default function Footer() {
               <a href="tel:+96896995001" style={{ color: "rgba(255,255,255,0.3)", fontSize: 13, textDecoration: "none", transition: "color 0.15s" }}
                 onMouseEnter={e => (e.currentTarget.style.color = "#fff")} onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.3)")}
               >+968 96995001</a>
-              <a href="tel:+96892030099" style={{ color: "rgba(255,255,255,0.3)", fontSize: 13, textDecoration: "none", transition: "color 0.15s" }}
-                onMouseEnter={e => (e.currentTarget.style.color = "#fff")} onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.3)")}
-              >+968 92030099</a>
-              <a href="mailto:info@globelogisticoman.com" style={{ color: "rgba(255,255,255,0.3)", fontSize: 13, textDecoration: "none", transition: "color 0.15s", wordBreak: "break-all" as const }}
+              <a href="mailto:sales@ols-oman.com" style={{ color: "rgba(255,255,255,0.3)", fontSize: 13, textDecoration: "none", transition: "color 0.15s", wordBreak: "break-all" as const }}
                 onMouseEnter={e => (e.currentTarget.style.color = "#38BDF8")} onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.3)")}
-              >info@globelogisticoman.com</a>
+              >sales@ols-oman.com</a>
             </div>
           </div>
         </div>

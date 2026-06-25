@@ -65,20 +65,6 @@ const SERVICES = [
     ],
   },
   {
-    icon: "📦",
-    name: "Warehousing",
-    title: "Smart Storage Solutions",
-    desc: "Modern, secure warehousing in Oman with flexible capacity — from general goods to temperature-controlled pharma.",
-    benefits: [
-      "Short & long-term storage",
-      "Temperature-controlled zones",
-      "Advanced inventory management",
-      "Pick & pack services",
-      "Cross-docking available",
-      "Distribution & fulfillment",
-    ],
-  },
-  {
     icon: "⚓",
     name: "Project Cargo",
     title: "Complex Solutions Made Simple",

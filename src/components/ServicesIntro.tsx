@@ -8,7 +8,6 @@ const SERVICES = [
   { icon: "🚢", name: "Sea Freight", brief: "Cost-effective" },
   { icon: "🚛", name: "Land Freight", brief: "Regional coverage" },
   { icon: "📋", name: "Customs", brief: "Expert clearance" },
-  { icon: "📦", name: "Warehousing", brief: "Flexible storage" },
   { icon: "⚓", name: "Project Cargo", brief: "Complex solutions" },
 ];
 
@@ -44,7 +43,7 @@ export default function ServicesIntro() {
         </motion.div>
 
         {/* Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 24 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 24 }}>
           {SERVICES.map((s, i) => (
             <motion.a
               key={s.name}

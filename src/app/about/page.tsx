@@ -13,26 +13,28 @@ export default function About() {
       <Navbar />
       <main>
         {/* Hero Section */}
-        <section className="ab-hero" style={{ background: "#fff", paddingTop: 28, paddingBottom: 64, borderBottom: "1px solid #E5E7EB" }}>
-          <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 60px" }}>
-            <h1 className="ab-h1" style={{ fontSize: 56, fontWeight: 800, color: "#0A1929", marginBottom: 20, lineHeight: 1.15, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
-              Enterprise Logistics.<br/>Regional Excellence.
+        <section className="ab-hero" style={{ background: "#04080f", paddingTop: 28, paddingBottom: 64, position: "relative", overflow: "hidden" }}>
+          <div style={{ position: "absolute", top: -60, left: "50%", transform: "translateX(-50%)", width: 800, height: 400, background: "radial-gradient(ellipse, rgba(79,142,247,0.1) 0%, transparent 70%)", pointerEvents: "none" }} />
+          <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 60px", position: "relative", zIndex: 1 }}>
+            <h1 className="ab-h1" style={{ fontSize: 56, fontWeight: 800, color: "#fff", marginBottom: 20, lineHeight: 1.1, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.03em" }}>
+              Enterprise Logistics.<br/><span className="gt">Regional Excellence.</span>
             </h1>
-            <p className="ab-sub" style={{ fontSize: 18, color: "#64748B", lineHeight: 1.7, maxWidth: 600 }}>
+            <p className="ab-sub" style={{ fontSize: 17, color: "rgba(255,255,255,0.45)", lineHeight: 1.75, maxWidth: 600 }}>
               We move cargo for importers, exporters, and manufacturers across the GCC and beyond with reliability, transparency, and precision.
             </p>
           </div>
         </section>
 
         {/* Story Section */}
-        <section className="ab-section" style={{ background: "#F8F9FA", paddingTop: 72, paddingBottom: 72, borderBottom: "1px solid #E5E7EB" }}>
+        <section className="ab-section" style={{ background: "#070b14", paddingTop: 72, paddingBottom: 72 }}>
+          <div style={{ position: "absolute", top: 0, left: "50%", transform: "translateX(-50%)", width: "60%", height: 1, background: "linear-gradient(90deg, transparent, rgba(79,142,247,0.25), transparent)" }} />
           <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 60px" }}>
             <div className="ab-2col" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 64, alignItems: "start" }}>
               <div>
-                <h2 className="ab-h2" style={{ fontSize: 40, fontWeight: 800, color: "#0A1929", marginBottom: 24, lineHeight: 1.2, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
+                <h2 className="ab-h2" style={{ fontSize: 40, fontWeight: 800, color: "#fff", marginBottom: 24, lineHeight: 1.1, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.03em" }}>
                   Our Story
                 </h2>
-                <div style={{ color: "#64748B", fontSize: 15, lineHeight: 1.8 }}>
+                <div style={{ color: "rgba(255,255,255,0.45)", fontSize: 15, lineHeight: 1.85 }}>
                   <p style={{ marginBottom: 20 }}>
                     Globe Logistic Service LLC was founded with one mission: to bring world-class logistics infrastructure to the Sultanate of Oman. Today, we&apos;re trusted by 1,000+ businesses across the GCC.
                   </p>
@@ -46,11 +48,11 @@ export default function About() {
               </div>
 
               <div>
-                <h2 className="ab-h2" style={{ fontSize: 40, fontWeight: 800, color: "#0A1929", marginBottom: 24, lineHeight: 1.2, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
+                <h2 className="ab-h2" style={{ fontSize: 40, fontWeight: 800, color: "#fff", marginBottom: 24, lineHeight: 1.1, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.03em" }}>
                   Our Mission
                 </h2>
-                <div style={{ background: "#fff", padding: 36, borderRadius: 8, border: "1px solid #E5E7EB" }}>
-                  <p style={{ color: "#64748B", fontSize: 16, lineHeight: 1.8, margin: 0 }}>
+                <div style={{ background: "rgba(255,255,255,0.04)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", padding: 36, borderRadius: 16, border: "1px solid rgba(255,255,255,0.08)" }}>
+                  <p style={{ color: "rgba(255,255,255,0.55)", fontSize: 16, lineHeight: 1.85, margin: 0 }}>
                     Connect global trade without limits by providing seamless, reliable logistics solutions that empower businesses to reach new markets with confidence.
                   </p>
                 </div>
@@ -60,24 +62,24 @@ export default function About() {
         </section>
 
         {/* Stats Section */}
-        <section className="ab-section" style={{ background: "#fff", paddingTop: 72, paddingBottom: 72, borderBottom: "1px solid #E5E7EB" }}>
+        <section className="ab-section" style={{ background: "#04080f", paddingTop: 72, paddingBottom: 72 }}>
           <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 60px" }}>
-            <h2 className="ab-h2 ab-center" style={{ fontSize: 40, fontWeight: 800, color: "#0A1929", marginBottom: 48, textAlign: "center", lineHeight: 1.2, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
-              By The Numbers
+            <h2 className="ab-h2 ab-center" style={{ fontSize: 40, fontWeight: 800, color: "#fff", marginBottom: 48, textAlign: "center", lineHeight: 1.1, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.03em" }}>
+              By The <span className="gt">Numbers</span>
             </h2>
 
-            <div className="ab-stats" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 32 }}>
+            <div className="ab-stats" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20 }}>
               {[
                 { number: "10+", label: "Years Industry Experience" },
                 { number: "50+", label: "Countries Connected" },
                 { number: "1000+", label: "Enterprise Clients" },
                 { number: "24/7", label: "Operations Support" },
               ].map((stat, i) => (
-                <div key={i} style={{ textAlign: "center", padding: "32px 24px", background: "#F8F9FA", borderRadius: 8, border: "1px solid #E5E7EB" }}>
-                  <div style={{ fontSize: 44, fontWeight: 800, color: "#0A1929", marginBottom: 10, fontFamily: "var(--font-inter-tight,sans-serif)" }}>
+                <div key={i} style={{ textAlign: "center", padding: "36px 24px", background: "rgba(255,255,255,0.04)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", borderRadius: 16, border: "1px solid rgba(255,255,255,0.07)" }}>
+                  <div style={{ fontSize: 44, fontWeight: 800, color: "#93c5fd", marginBottom: 10, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.03em" }}>
                     {stat.number}
                   </div>
-                  <div style={{ fontSize: 13, color: "#64748B", fontWeight: 500 }}>
+                  <div style={{ fontSize: 13, color: "rgba(255,255,255,0.35)", fontWeight: 500 }}>
                     {stat.label}
                   </div>
                 </div>
@@ -87,13 +89,13 @@ export default function About() {
         </section>
 
         {/* Why Choose Us */}
-        <section className="ab-section" style={{ background: "#F8F9FA", paddingTop: 72, paddingBottom: 72 }}>
+        <section className="ab-section" style={{ background: "#070b14", paddingTop: 72, paddingBottom: 72 }}>
           <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 60px" }}>
-            <h2 className="ab-h2" style={{ fontSize: 40, fontWeight: 800, color: "#0A1929", marginBottom: 48, lineHeight: 1.2, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
-              Why Businesses Trust Us
+            <h2 className="ab-h2" style={{ fontSize: 40, fontWeight: 800, color: "#fff", marginBottom: 48, lineHeight: 1.1, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.03em" }}>
+              Why Businesses <span className="gt">Trust Us</span>
             </h2>
 
-            <div className="ab-trust" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 32 }}>
+            <div className="ab-trust" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20 }}>
               {[
                 { icon: ShieldCheck, title: "Licensed & Compliant", desc: "Oman-certified freight forwarder and customs broker. IATA, IMDG, and pharmaceutical certified." },
                 { icon: Globe, title: "Global Network", desc: "Connected across 50+ countries with trusted partners for seamless cross-border operations." },
@@ -102,14 +104,14 @@ export default function About() {
               ].map((item, i) => {
                 const Icon = item.icon;
                 return (
-                  <div key={i} style={{ padding: 32, background: "#fff", borderRadius: 8, border: "1px solid #E5E7EB" }}>
-                    <div style={{ marginBottom: 18 }}>
-                      <Icon size={28} strokeWidth={1.5} style={{ color: "#0066FF" }} />
+                  <div key={i} style={{ padding: 36, background: "rgba(255,255,255,0.04)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", borderRadius: 16, border: "1px solid rgba(255,255,255,0.07)" }}>
+                    <div style={{ marginBottom: 20, width: 48, height: 48, borderRadius: 12, background: "rgba(79,142,247,0.1)", border: "1px solid rgba(79,142,247,0.18)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+                      <Icon size={22} strokeWidth={1.5} style={{ color: "#93c5fd" }} />
                     </div>
-                    <h3 style={{ fontSize: 18, fontWeight: 700, color: "#0A1929", marginBottom: 10, letterSpacing: "-0.01em" }}>
+                    <h3 style={{ fontSize: 18, fontWeight: 700, color: "#fff", marginBottom: 10, letterSpacing: "-0.02em" }}>
                       {item.title}
                     </h3>
-                    <p style={{ fontSize: 15, color: "#64748B", lineHeight: 1.7, margin: 0 }}>
+                    <p style={{ fontSize: 14.5, color: "rgba(255,255,255,0.4)", lineHeight: 1.75, margin: 0 }}>
                       {item.desc}
                     </p>
                   </div>

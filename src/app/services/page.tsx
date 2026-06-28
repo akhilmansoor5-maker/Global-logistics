@@ -88,28 +88,29 @@ export default function ServicesPage() {
       <Navbar />
 
       {/* Hero */}
-      <section className="sv-hero" style={{ background: "#fff", padding: "28px 60px 64px", borderBottom: "1px solid #E5E7EB" }}>
-        <div style={{ maxWidth: 1400, margin: "0 auto" }}>
-          <div style={{ marginBottom: 16 }}>
-            <span style={{ color: "#0066FF", fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" }}>Our Services</span>
+      <section className="sv-hero" style={{ background: "#04080f", padding: "28px 60px 64px", position: "relative", overflow: "hidden" }}>
+        <div style={{ position: "absolute", top: -60, left: "50%", transform: "translateX(-50%)", width: 800, height: 400, background: "radial-gradient(ellipse, rgba(79,142,247,0.1) 0%, transparent 70%)", pointerEvents: "none" }} />
+        <div style={{ maxWidth: 1400, margin: "0 auto", position: "relative", zIndex: 1 }}>
+          <div style={{ marginBottom: 20 }}>
+            <span className="label-badge">Our Services</span>
           </div>
-          <h1 className="sv-h1" style={{ fontSize: 56, fontWeight: 800, color: "#0A1929", marginBottom: 20, lineHeight: 1.15, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
-            End-to-End Logistics Solutions
+          <h1 className="sv-h1" style={{ fontSize: 56, fontWeight: 800, color: "#fff", marginBottom: 20, lineHeight: 1.1, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.03em" }}>
+            End-to-End <span className="gt">Logistics Solutions</span>
           </h1>
-          <p className="sv-sub" style={{ fontSize: 18, color: "#64748B", maxWidth: 640, lineHeight: 1.8 }}>
+          <p className="sv-sub" style={{ fontSize: 17, color: "rgba(255,255,255,0.45)", maxWidth: 640, lineHeight: 1.8 }}>
             Air, sea, and land freight. Customs clearance. Project cargo. We handle every aspect of your supply chain with precision and expertise.
           </p>
         </div>
       </section>
 
       {/* Services List */}
-      <section className="sv-list" style={{ background: "#fff", padding: "72px 60px" }}>
+      <section className="sv-list" style={{ background: "#04080f", padding: "72px 60px" }}>
         <div style={{ maxWidth: 1400, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr", gap: 72 }}>
           {SERVICES.map((service, i) => (
             <div key={service.name}>
               <ServiceDetail service={service} index={i} />
               {i < SERVICES.length - 1 && (
-                <div style={{ marginTop: 72, borderBottom: "1px solid rgba(0,102,255,0.1)" }} />
+                <div style={{ marginTop: 72, borderBottom: "1px solid rgba(79,142,247,0.1)" }} />
               )}
             </div>
           ))}

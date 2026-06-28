@@ -14,7 +14,7 @@ export default function Navbar() {
   const [open, setOpen] = useState(false);
 
   useEffect(() => {
-    const fn = () => setSolid(window.scrollY > 60);
+    const fn = () => setSolid(window.scrollY > 40);
     window.addEventListener("scroll", fn, { passive: true });
     return () => window.removeEventListener("scroll", fn);
   }, []);
@@ -22,41 +22,46 @@ export default function Navbar() {
   return (
     <>
       <motion.header
-        initial={{ y: -56, opacity: 0 }}
+        initial={{ y: -64, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
-        transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
+        transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         style={{
           position: "fixed",
           inset: "0 0 auto",
           zIndex: 50,
-          height: 56,
-          transition: "background 0.25s, border-color 0.25s, box-shadow 0.25s",
-          background: solid ? "#fff" : "rgba(255,255,255,0.98)",
-          borderBottom: solid ? "1px solid #E5E7EB" : "1px solid rgba(0,0,0,0.04)",
-          boxShadow: solid ? "0 2px 8px rgba(0,0,0,0.04)" : "none",
-          backdropFilter: "blur(10px)",
+          height: 64,
+          transition: "background 0.3s, border-color 0.3s, box-shadow 0.3s",
+          background: solid
+            ? "rgba(4,8,15,0.85)"
+            : "rgba(4,8,15,0.4)",
+          borderBottom: solid
+            ? "1px solid rgba(255,255,255,0.08)"
+            : "1px solid rgba(255,255,255,0.04)",
+          boxShadow: solid ? "0 8px 40px rgba(0,0,0,0.5)" : "none",
+          backdropFilter: "blur(24px)",
+          WebkitBackdropFilter: "blur(24px)",
         }}
       >
-        <div className="nb-inner" style={{ maxWidth: 1400, margin: "0 auto", padding: "0 40px", height: "100%", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+        <div className="nb-inner" style={{ maxWidth: 1400, margin: "0 auto", padding: "0 48px", height: "100%", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
 
           {/* Logo */}
           <a href="/Global-logistics/" style={{ display: "flex", alignItems: "center", textDecoration: "none", flexShrink: 0 }}>
             <img
               src="/Global-logistics/gls-logo.png"
               alt="Globe Logistic Services LLC"
-              style={{ height: 40, width: "auto", objectFit: "contain" }}
+              style={{ height: 38, width: "auto", objectFit: "contain", filter: "brightness(0) invert(1)" }}
             />
           </a>
 
           {/* Desktop Nav */}
-          <nav style={{ display: "flex", alignItems: "center", gap: 48 }} className="hidden-mobile">
+          <nav style={{ display: "flex", alignItems: "center", gap: 44 }} className="hidden-mobile">
             {NAV.map(n => (
               <a
                 key={n.label}
                 href={n.href}
-                style={{ color: "#64748B", fontSize: 13, fontWeight: 500, textDecoration: "none", transition: "color 0.2s" }}
-                onMouseEnter={e => (e.currentTarget.style.color = "#0A1929")}
-                onMouseLeave={e => (e.currentTarget.style.color = "#64748B")}
+                style={{ color: "rgba(255,255,255,0.5)", fontSize: 13.5, fontWeight: 500, textDecoration: "none", transition: "color 0.2s", letterSpacing: "0.01em" }}
+                onMouseEnter={e => (e.currentTarget.style.color = "#fff")}
+                onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.5)")}
               >
                 {n.label}
               </a>
@@ -65,17 +70,29 @@ export default function Navbar() {
 
           {/* CTA */}
           <div style={{ display: "flex", alignItems: "center", gap: 20, flexShrink: 0 }} className="hidden-mobile">
-            <a href="tel:+96896995001" style={{ color: "#94A3B8", fontSize: 12, textDecoration: "none", transition: "color 0.2s", fontWeight: 500 }}
-              onMouseEnter={e => (e.currentTarget.style.color = "#0A1929")}
-              onMouseLeave={e => (e.currentTarget.style.color = "#94A3B8")}
+            <a href="tel:+96896995001" style={{ color: "rgba(255,255,255,0.35)", fontSize: 12.5, textDecoration: "none", transition: "color 0.2s", fontWeight: 500 }}
+              onMouseEnter={e => (e.currentTarget.style.color = "rgba(255,255,255,0.8)")}
+              onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.35)")}
             >
               +968 96995001
             </a>
             <a
               href="mailto:sales@gls-oman.com"
-              style={{ background: "#0A1929", color: "#fff", fontSize: 13, fontWeight: 600, padding: "10px 22px", borderRadius: 6, textDecoration: "none", transition: "all 0.25s", transform: "translateY(0)" }}
-              onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-1px)"; e.currentTarget.style.boxShadow = "0 8px 20px rgba(10,25,41,0.12)"; }}
-              onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "none"; }}
+              style={{
+                background: "linear-gradient(135deg, #4F8EF7 0%, #3b7ef0 100%)",
+                color: "#fff",
+                fontSize: 13,
+                fontWeight: 600,
+                padding: "9px 22px",
+                borderRadius: 8,
+                textDecoration: "none",
+                transition: "all 0.25s",
+                transform: "translateY(0)",
+                boxShadow: "0 4px 16px rgba(79,142,247,0.3)",
+                letterSpacing: "0.01em",
+              }}
+              onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-2px)"; e.currentTarget.style.boxShadow = "0 8px 28px rgba(79,142,247,0.45)"; }}
+              onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 4px 16px rgba(79,142,247,0.3)"; }}
             >
               Contact Us
             </a>
@@ -84,10 +101,10 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setOpen(!open)}
-            style={{ display: "none", color: "#0A1929", background: "none", border: "none", cursor: "pointer", padding: 8 }}
+            style={{ display: "none", color: "rgba(255,255,255,0.8)", background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, cursor: "pointer", padding: 8, lineHeight: 0 }}
             className="show-mobile"
           >
-            {open ? <X size={24} /> : <Menu size={24} />}
+            {open ? <X size={20} /> : <Menu size={20} />}
           </button>
         </div>
       </motion.header>
@@ -96,18 +113,30 @@ export default function Navbar() {
       <AnimatePresence>
         {open && (
           <motion.div
-            initial={{ opacity: 0, y: -16 }}
+            initial={{ opacity: 0, y: -12 }}
             animate={{ opacity: 1, y: 0 }}
-            exit={{ opacity: 0, y: -16 }}
-            transition={{ duration: 0.2 }}
-            style={{ position: "fixed", inset: "56px 0 0", zIndex: 49, background: "#fff", padding: "24px 24px", display: "flex", flexDirection: "column", gap: 0 }}
+            exit={{ opacity: 0, y: -12 }}
+            transition={{ duration: 0.22 }}
+            style={{
+              position: "fixed",
+              inset: "64px 0 0",
+              zIndex: 49,
+              background: "rgba(4,8,15,0.97)",
+              backdropFilter: "blur(24px)",
+              WebkitBackdropFilter: "blur(24px)",
+              padding: "28px 24px",
+              display: "flex",
+              flexDirection: "column",
+              gap: 0,
+              borderTop: "1px solid rgba(255,255,255,0.06)",
+            }}
           >
             {NAV.map(n => (
               <a
                 key={n.label}
                 href={n.href}
                 onClick={() => setOpen(false)}
-                style={{ color: "#475569", fontSize: 16, fontWeight: 600, padding: "16px 0", borderBottom: "1px solid #E5E7EB", textDecoration: "none" }}
+                style={{ color: "rgba(255,255,255,0.7)", fontSize: 17, fontWeight: 600, padding: "18px 0", borderBottom: "1px solid rgba(255,255,255,0.06)", textDecoration: "none", letterSpacing: "-0.01em" }}
               >
                 {n.label}
               </a>
@@ -115,7 +144,18 @@ export default function Navbar() {
             <a
               href="mailto:sales@gls-oman.com"
               onClick={() => setOpen(false)}
-              style={{ marginTop: 20, background: "#0A1929", color: "#fff", textAlign: "center", fontWeight: 600, fontSize: 13, padding: "12px", borderRadius: 6, textDecoration: "none" }}
+              style={{
+                marginTop: 24,
+                background: "linear-gradient(135deg, #4F8EF7 0%, #3b7ef0 100%)",
+                color: "#fff",
+                textAlign: "center",
+                fontWeight: 600,
+                fontSize: 14,
+                padding: "14px",
+                borderRadius: 10,
+                textDecoration: "none",
+                boxShadow: "0 4px 20px rgba(79,142,247,0.3)",
+              }}
             >
               Contact Us
             </a>
@@ -126,7 +166,7 @@ export default function Navbar() {
       <style>{`
         @media (max-width: 768px) {
           .hidden-mobile { display: none !important; }
-          .show-mobile { display: block !important; }
+          .show-mobile { display: flex !important; }
           .nb-inner { padding: 0 20px !important; }
         }
       `}</style>

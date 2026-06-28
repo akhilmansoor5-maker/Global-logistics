@@ -26,17 +26,17 @@ export default function WhyChoose() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} style={{ background: "#F9FAFB", padding: "100px 40px" }}>
-      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+    <section ref={ref} style={{ background: "linear-gradient(180deg, #fff 0%, #f8fbff 50%, #fff 100%)", padding: "120px 60px" }}>
+      <div style={{ maxWidth: 1400, margin: "0 auto" }}>
 
-        {/* Header */}
+        {/* Header - Centered */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          style={{ marginBottom: 80, maxWidth: 700 }}
+          style={{ marginBottom: 100, maxWidth: 800, margin: "0 auto 100px", textAlign: "center" }}
         >
-          <h2 style={{ fontSize: 48, fontWeight: 800, color: "#0A1929", marginBottom: 20, lineHeight: 1.15, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
+          <h2 style={{ fontSize: 56, fontWeight: 800, color: "#0A1929", marginBottom: 24, lineHeight: 1.1, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
             Why businesses choose us
           </h2>
           <p style={{ fontSize: 16, color: "#64748B", lineHeight: 1.7 }}>
@@ -44,8 +44,8 @@ export default function WhyChoose() {
           </p>
         </motion.div>
 
-        {/* Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 40 }}>
+        {/* Grid - Better spacing and cards */}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 60 }}>
           {REASONS.map((r, i) => {
             const Icon = r.icon;
             return (
@@ -54,12 +54,12 @@ export default function WhyChoose() {
                 initial={{ opacity: 0, y: 24 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
-                style={{ padding: 0 }}
+                style={{ padding: "40px 32px", background: "#fff", borderRadius: "8px", border: "1px solid rgba(0,102,255,0.1)", transition: "all 0.3s ease" }}
               >
-                <div style={{ marginBottom: 24 }}>
-                  <Icon size={28} strokeWidth={1.5} style={{ color: "#0A1929" }} />
+                <div style={{ marginBottom: 28, height: 40, display: "flex", alignItems: "flex-start" }}>
+                  <Icon size={32} strokeWidth={1.5} style={{ color: "#0066FF" }} />
                 </div>
-                <h3 style={{ fontSize: 18, fontWeight: 700, color: "#0A1929", marginBottom: 12, letterSpacing: "-0.01em" }}>{r.title}</h3>
+                <h3 style={{ fontSize: 19, fontWeight: 700, color: "#0A1929", marginBottom: 16, letterSpacing: "-0.01em" }}>{r.title}</h3>
                 <p style={{ fontSize: 15, color: "#64748B", lineHeight: 1.7, margin: 0 }}>{r.desc}</p>
               </motion.div>
             );

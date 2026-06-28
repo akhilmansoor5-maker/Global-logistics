@@ -6,8 +6,8 @@ export default function Hero() {
   return (
     <section style={{
       background: "linear-gradient(135deg, #fff 0%, #f0f7ff 50%, #fff 100%)",
-      paddingTop: 140,
-      paddingBottom: 140,
+      paddingTop: 80,
+      paddingBottom: 100,
       borderBottom: "1px solid #E5E7EB",
       position: "relative",
       overflow: "hidden"
@@ -24,7 +24,7 @@ export default function Hero() {
         pointerEvents: "none",
       }} />
 
-      <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px", display: "grid", gridTemplateColumns: "1fr 1fr", gap: 120, alignItems: "center", position: "relative", zIndex: 1 }}>
+      <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 60px", display: "grid", gridTemplateColumns: "1fr 1.1fr", gap: 100, alignItems: "center", position: "relative", zIndex: 1 }}>
 
         {/* Content — LEFT SIDE */}
         <motion.div
@@ -33,21 +33,21 @@ export default function Hero() {
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
           {/* Label */}
-          <div style={{ display: "inline-flex", alignItems: "center", gap: 10, marginBottom: 36, paddingBottom: 16, borderBottom: "1px solid rgba(0,102,255,0.2)" }}>
+          <div style={{ display: "inline-flex", alignItems: "center", gap: 10, marginBottom: 24, paddingBottom: 12, borderBottom: "2px solid rgba(0,102,255,0.3)" }}>
             <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#0066FF" }}/>
-            <span style={{ color: "#0066FF", fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" }}>
+            <span style={{ color: "#0066FF", fontSize: 11, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase" }}>
               Global Logistics. Local Expertise.
             </span>
           </div>
 
           {/* Headline - Refined and powerful */}
-          <h1 style={{ fontSize: 76, fontWeight: 800, color: "#0A1929", marginBottom: 32, lineHeight: 1.1, letterSpacing: "-0.02em", fontFamily: "var(--font-inter-tight,sans-serif)" }}>
+          <h1 style={{ fontSize: 72, fontWeight: 900, color: "#0A1929", marginBottom: 28, lineHeight: 1.08, letterSpacing: "-0.02em", fontFamily: "var(--font-inter-tight,sans-serif)" }}>
             Move global cargo with <span style={{ color: "#0066FF" }}>confidence</span>
           </h1>
 
           {/* Subtitle */}
-          <p style={{ fontSize: 17, color: "#64748B", lineHeight: 1.75, marginBottom: 56, maxWidth: 540 }}>
-            Air, sea, and land freight. Customs clearance. Real-time tracking. Licensed for every market. Trusted by 1000+ businesses across the GCC.
+          <p style={{ fontSize: 16, color: "#64748B", lineHeight: 1.7, marginBottom: 48, maxWidth: 520 }}>
+            Air, sea, and land freight. Customs clearance. Real-time tracking. Licensed for every market. Trusted by 1000+ businesses.
           </p>
 
           {/* CTA Button */}
@@ -91,7 +91,7 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <style>{`@media(max-width:768px){section>div{grid-template-columns:1fr!important;gap:64px!important;padding:0 40px!important}h1{font-size:56px!important;line-height:1.15!important}}`}</style>
+      <style>{`@media(max-width:768px){section>div{grid-template-columns:1fr!important;gap:48px!important;padding:0 40px!important}h1{font-size:48px!important;line-height:1.1!important}}`}</style>
     </section>
   );
 }

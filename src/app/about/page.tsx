@@ -1,7 +1,5 @@
-"use client";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
-import { motion } from "framer-motion";
 import { ShieldCheck, Users, Globe, Clock3 } from "lucide-react";
 
 export const metadata = {
@@ -17,18 +15,12 @@ export default function About() {
         {/* Hero Section */}
         <section style={{ background: "#fff", paddingTop: 80, paddingBottom: 80, borderBottom: "1px solid #E5E7EB" }}>
           <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
               <h1 style={{ fontSize: 56, fontWeight: 800, color: "#0A1929", marginBottom: 24, lineHeight: 1.15, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
                 Enterprise Logistics. Regional Excellence.
               </h1>
               <p style={{ fontSize: 18, color: "#64748B", lineHeight: 1.7, maxWidth: 600 }}>
                 We move cargo for importers, exporters, and manufacturers across the GCC and beyond with reliability, transparency, and precision.
               </p>
-            </motion.div>
           </div>
         </section>
 
@@ -36,12 +28,7 @@ export default function About() {
         <section style={{ background: "#F8F9FA", paddingTop: 100, paddingBottom: 100, borderBottom: "1px solid #E5E7EB" }}>
           <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "start" }}>
-              <motion.div
-                initial={{ opacity: 0, x: -20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
+              <div>
                 <h2 style={{ fontSize: 40, fontWeight: 800, color: "#0A1929", marginBottom: 28, lineHeight: 1.2, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
                   Our Story
                 </h2>
@@ -56,14 +43,9 @@ export default function About() {
                     We combine deep regional expertise with global partnerships to deliver reliable, transparent, and cost-effective logistics solutions.
                   </p>
                 </div>
-              </motion.div>
+              </div>
 
-              <motion.div
-                initial={{ opacity: 0, x: 20 }}
-                whileInView={{ opacity: 1, x: 0 }}
-                transition={{ duration: 0.6 }}
-                viewport={{ once: true }}
-              >
+              <div>
                 <h2 style={{ fontSize: 40, fontWeight: 800, color: "#0A1929", marginBottom: 28, lineHeight: 1.2, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
                   Our Mission
                 </h2>
@@ -72,7 +54,7 @@ export default function About() {
                     Connect global trade without limits by providing seamless, reliable logistics solutions that empower businesses to reach new markets with confidence.
                   </p>
                 </div>
-              </motion.div>
+              </div>
             </div>
           </div>
         </section>
@@ -80,15 +62,9 @@ export default function About() {
         {/* Stats Section */}
         <section style={{ background: "#fff", paddingTop: 100, paddingBottom: 100, borderBottom: "1px solid #E5E7EB" }}>
           <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              style={{ fontSize: 40, fontWeight: 800, color: "#0A1929", marginBottom: 80, textAlign: "center", lineHeight: 1.2, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}
-            >
+            <h2 style={{ fontSize: 40, fontWeight: 800, color: "#0A1929", marginBottom: 80, textAlign: "center", lineHeight: 1.2, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
               By The Numbers
-            </motion.h2>
+            </h2>
 
             <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 32 }}>
               {[
@@ -97,21 +73,14 @@ export default function About() {
                 { number: "1000+", label: "Enterprise Clients" },
                 { number: "24/7", label: "Operations Support" },
               ].map((stat, i) => (
-                <motion.div
-                  key={i}
-                  initial={{ opacity: 0, y: 20 }}
-                  whileInView={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.5, delay: i * 0.1 }}
-                  viewport={{ once: true }}
-                  style={{ textAlign: "center" }}
-                >
+                <div key={i} style={{ textAlign: "center" }}>
                   <div style={{ fontSize: 48, fontWeight: 800, color: "#0A1929", marginBottom: 12, fontFamily: "var(--font-inter-tight,sans-serif)" }}>
                     {stat.number}
                   </div>
                   <div style={{ fontSize: 14, color: "#64748B", fontWeight: 500 }}>
                     {stat.label}
                   </div>
-                </motion.div>
+                </div>
               ))}
             </div>
           </div>
@@ -120,15 +89,9 @@ export default function About() {
         {/* Why Choose Us */}
         <section style={{ background: "#F8F9FA", paddingTop: 100, paddingBottom: 100 }}>
           <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
-            <motion.h2
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-              viewport={{ once: true }}
-              style={{ fontSize: 40, fontWeight: 800, color: "#0A1929", marginBottom: 80, lineHeight: 1.2, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}
-            >
+            <h2 style={{ fontSize: 40, fontWeight: 800, color: "#0A1929", marginBottom: 80, lineHeight: 1.2, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
               Why Businesses Trust Us
-            </motion.h2>
+            </h2>
 
             <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 48 }}>
               {[
@@ -139,14 +102,7 @@ export default function About() {
               ].map((item, i) => {
                 const Icon = item.icon;
                 return (
-                  <motion.div
-                    key={i}
-                    initial={{ opacity: 0, y: 20 }}
-                    whileInView={{ opacity: 1, y: 0 }}
-                    transition={{ duration: 0.5, delay: i * 0.1 }}
-                    viewport={{ once: true }}
-                    style={{ padding: 32, background: "#fff", borderRadius: 8, border: "1px solid #E5E7EB" }}
-                  >
+                  <div key={i} style={{ padding: 32, background: "#fff", borderRadius: 8, border: "1px solid #E5E7EB" }}>
                     <div style={{ marginBottom: 20 }}>
                       <Icon size={28} strokeWidth={1.5} style={{ color: "#0A1929" }} />
                     </div>
@@ -156,7 +112,7 @@ export default function About() {
                     <p style={{ fontSize: 15, color: "#64748B", lineHeight: 1.7, margin: 0 }}>
                       {item.desc}
                     </p>
-                  </motion.div>
+                  </div>
                 );
               })}
             </div>

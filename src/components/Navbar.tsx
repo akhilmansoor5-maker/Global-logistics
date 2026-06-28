@@ -78,7 +78,7 @@ export default function Navbar() {
               +968 96995001
             </a>
             <a
-              href="mailto:sales@ols-oman.com"
+              href="mailto:sales@gls-oman.com"
               style={{ background: "#0066FF", color: "#fff", fontSize: 13, fontWeight: 600, padding: "10px 22px", borderRadius: 8, textDecoration: "none", transition: "background 0.2s" }}
               onMouseEnter={e => (e.currentTarget.style.background = "#0055DD")}
               onMouseLeave={e => (e.currentTarget.style.background = "#0066FF")}
@@ -119,7 +119,7 @@ export default function Navbar() {
               </a>
             ))}
             <a
-              href="mailto:sales@ols-oman.com"
+              href="mailto:sales@gls-oman.com"
               onClick={() => setOpen(false)}
               style={{ marginTop: 20, background: "#0066FF", color: "#fff", textAlign: "center", fontWeight: 700, fontSize: 14, padding: "14px", borderRadius: 8, textDecoration: "none" }}
             >

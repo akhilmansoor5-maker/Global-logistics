@@ -37,7 +37,7 @@ export default function Navbar() {
           backdropFilter: "blur(10px)",
         }}
       >
-        <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px", height: "100%", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
+        <div className="nb-inner" style={{ maxWidth: 1400, margin: "0 auto", padding: "0 40px", height: "100%", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
 
           {/* Logo */}
           <a href="/Global-logistics/" style={{ display: "flex", alignItems: "center", gap: 12, textDecoration: "none", flexShrink: 0 }}>
@@ -105,7 +105,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.2 }}
-            style={{ position: "fixed", inset: "56px 0 0", zIndex: 49, background: "#fff", padding: "24px 40px", display: "flex", flexDirection: "column", gap: 0 }}
+            style={{ position: "fixed", inset: "56px 0 0", zIndex: 49, background: "#fff", padding: "24px 24px", display: "flex", flexDirection: "column", gap: 0 }}
           >
             {NAV.map(n => (
               <a
@@ -132,6 +132,7 @@ export default function Navbar() {
         @media (max-width: 768px) {
           .hidden-mobile { display: none !important; }
           .show-mobile { display: block !important; }
+          .nb-inner { padding: 0 20px !important; }
         }
       `}</style>
     </>

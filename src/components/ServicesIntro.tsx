@@ -16,20 +16,20 @@ export default function ServicesIntro() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} style={{ background: "#F8F9FA", padding: "80px 60px", borderTop: "1px solid #E5E7EB" }}>
+    <section ref={ref} className="si-section" style={{ background: "#F8F9FA", padding: "80px 60px", borderTop: "1px solid #E5E7EB" }}>
       <div style={{ maxWidth: 1400, margin: "0 auto" }}>
 
-        {/* Header - Centered */}
         <motion.div
+          className="si-header"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          style={{ marginBottom: 56, maxWidth: 800, margin: "0 auto 56px", textAlign: "center" }}
+          style={{ maxWidth: 800, margin: "0 auto 56px", textAlign: "center" }}
         >
-          <h2 style={{ fontSize: 56, fontWeight: 800, color: "#0A1929", marginBottom: 24, lineHeight: 1.1, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
+          <h2 style={{ fontSize: 56, fontWeight: 800, color: "#0A1929", marginBottom: 20, lineHeight: 1.1, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
             Our Services
           </h2>
-          <p style={{ fontSize: 16, color: "#64748B", lineHeight: 1.7, marginBottom: 40 }}>
+          <p style={{ fontSize: 16, color: "#64748B", lineHeight: 1.7, marginBottom: 32 }}>
             Comprehensive logistics solutions tailored for importers, exporters, and manufacturers.
           </p>
           <a
@@ -42,8 +42,7 @@ export default function ServicesIntro() {
           </a>
         </motion.div>
 
-        {/* Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 40 }}>
+        <div className="si-grid" style={{ display: "grid", gridTemplateColumns: "repeat(5, 1fr)", gap: 24 }}>
           {SERVICES.map((s, i) => {
             const Icon = s.icon;
             return (
@@ -54,7 +53,7 @@ export default function ServicesIntro() {
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: i * 0.08 }}
                 style={{
-                  padding: "36px 28px",
+                  padding: "32px 24px",
                   background: "#fff",
                   borderRadius: 8,
                   border: "1px solid rgba(0,102,255,0.1)",
@@ -64,17 +63,14 @@ export default function ServicesIntro() {
                   display: "flex",
                   flexDirection: "column",
                   gap: 16,
-                  transform: "translateY(0)",
                 }}
                 onMouseEnter={e => {
                   (e.currentTarget as HTMLAnchorElement).style.borderColor = "#0066FF";
-                  (e.currentTarget as HTMLAnchorElement).style.background = "#f0f7ff";
-                  (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 12px 32px rgba(0,102,255,0.12)";
+                  (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 8px 24px rgba(0,102,255,0.1)";
                   (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-3px)";
                 }}
                 onMouseLeave={e => {
                   (e.currentTarget as HTMLAnchorElement).style.borderColor = "rgba(0,102,255,0.1)";
-                  (e.currentTarget as HTMLAnchorElement).style.background = "#fff";
                   (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none";
                   (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)";
                 }}
@@ -83,7 +79,7 @@ export default function ServicesIntro() {
                   <Icon size={28} strokeWidth={1.5} style={{ color: "#0066FF" }} />
                 </div>
                 <div>
-                  <h3 style={{ fontSize: 17, fontWeight: 700, color: "#0A1929", margin: 0, letterSpacing: "-0.01em" }}>{s.name}</h3>
+                  <h3 style={{ fontSize: 16, fontWeight: 700, color: "#0A1929", margin: 0, letterSpacing: "-0.01em" }}>{s.name}</h3>
                   <p style={{ fontSize: 13, color: "#94A3B8", margin: "8px 0 0 0" }}>{s.brief}</p>
                 </div>
               </motion.a>
@@ -92,7 +88,12 @@ export default function ServicesIntro() {
         </div>
       </div>
 
-      <style>{`@media(max-width:1200px){div>div:last-child{grid-template-columns:repeat(3,1fr)!important}}@media(max-width:768px){div>div:last-child{grid-template-columns:1fr 1fr!important}}@media(max-width:600px){div>div:last-child{grid-template-columns:1fr!important}}`}</style>
+      <style>{`
+        @media(max-width:1200px){.si-grid{grid-template-columns:repeat(3,1fr)!important}}
+        @media(max-width:1024px){.si-section{padding:60px 40px!important}}
+        @media(max-width:768px){.si-section{padding:48px 24px!important}.si-grid{grid-template-columns:1fr 1fr!important;gap:16px!important}.si-header h2{font-size:32px!important}.si-header p{font-size:14px!important}}
+        @media(max-width:480px){.si-grid{grid-template-columns:1fr!important}}
+      `}</style>
     </section>
   );
 }

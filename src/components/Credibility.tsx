@@ -31,17 +31,17 @@ export default function Credibility() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} style={{ background: "#fff", padding: "80px 60px", borderTop: "1px solid #E5E7EB" }}>
+    <section ref={ref} className="cr-section" style={{ background: "#fff", padding: "80px 60px", borderTop: "1px solid #E5E7EB" }}>
       <div style={{ maxWidth: 1400, margin: "0 auto" }}>
 
-        {/* Header */}
         <motion.div
+          className="cr-header"
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          style={{ marginBottom: 56, maxWidth: 800, margin: "0 auto 56px", textAlign: "center" }}
+          style={{ maxWidth: 800, margin: "0 auto 56px", textAlign: "center" }}
         >
-          <h2 style={{ fontSize: 56, fontWeight: 800, color: "#0A1929", marginBottom: 24, lineHeight: 1.1, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
+          <h2 style={{ fontSize: 56, fontWeight: 800, color: "#0A1929", marginBottom: 20, lineHeight: 1.1, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
             Enterprise logistics, built for scale
           </h2>
           <p style={{ fontSize: 16, color: "#64748B", lineHeight: 1.7 }}>
@@ -49,8 +49,7 @@ export default function Credibility() {
           </p>
         </motion.div>
 
-        {/* Capabilities Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 40 }}>
+        <div className="cr-grid" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 32 }}>
           {CAPABILITIES.map((cap, i) => {
             const Icon = cap.icon;
             return (
@@ -76,7 +75,10 @@ export default function Credibility() {
         </div>
       </div>
 
-      <style>{`@media(max-width:768px){section>div>div:last-child{grid-template-columns:1fr!important;gap:40px!important}h2{font-size:36px!important}}`}</style>
+      <style>{`
+        @media(max-width:1024px){.cr-section{padding:60px 40px!important}}
+        @media(max-width:768px){.cr-section{padding:48px 24px!important}.cr-grid{grid-template-columns:1fr!important;gap:16px!important}.cr-header h2{font-size:32px!important}.cr-header p{font-size:14px!important}}
+      `}</style>
     </section>
   );
 }

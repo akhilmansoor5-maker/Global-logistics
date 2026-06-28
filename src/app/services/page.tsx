@@ -86,28 +86,28 @@ export default function ServicesPage() {
       <Navbar />
 
       {/* Hero */}
-      <section style={{ background: "#fff", padding: "28px 60px 64px", borderBottom: "1px solid #E5E7EB" }}>
+      <section className="sv-hero" style={{ background: "#fff", padding: "28px 60px 64px", borderBottom: "1px solid #E5E7EB" }}>
         <div style={{ maxWidth: 1400, margin: "0 auto" }}>
-          <div style={{ marginBottom: 20 }}>
+          <div style={{ marginBottom: 16 }}>
             <span style={{ color: "#0066FF", fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" }}>Our Services</span>
           </div>
-          <h1 style={{ fontSize: 64, fontWeight: 800, color: "#0A1929", marginBottom: 24, lineHeight: 1.15, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
+          <h1 className="sv-h1" style={{ fontSize: 56, fontWeight: 800, color: "#0A1929", marginBottom: 20, lineHeight: 1.15, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
             End-to-End Logistics Solutions
           </h1>
-          <p style={{ fontSize: 18, color: "#64748B", maxWidth: 700, lineHeight: 1.8 }}>
+          <p className="sv-sub" style={{ fontSize: 18, color: "#64748B", maxWidth: 640, lineHeight: 1.8 }}>
             Air, sea, and land freight. Customs clearance. Project cargo. We handle every aspect of your supply chain with precision and expertise.
           </p>
         </div>
       </section>
 
-      {/* Services Grid */}
-      <section style={{ background: "#fff", padding: "72px 60px" }}>
+      {/* Services List */}
+      <section className="sv-list" style={{ background: "#fff", padding: "72px 60px" }}>
         <div style={{ maxWidth: 1400, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr", gap: 72 }}>
           {SERVICES.map((service, i) => (
             <div key={service.name}>
               <ServiceDetail service={service} index={i} />
               {i < SERVICES.length - 1 && (
-                <div style={{ marginTop: 72, paddingBottom: 0, borderBottom: "1px solid rgba(0,102,255,0.1)" }} />
+                <div style={{ marginTop: 72, borderBottom: "1px solid rgba(0,102,255,0.1)" }} />
               )}
             </div>
           ))}
@@ -115,6 +115,20 @@ export default function ServicesPage() {
       </section>
 
       <Footer />
+
+      <style>{`
+        @media(max-width:1024px){
+          .sv-hero{padding:20px 40px 48px!important}
+          .sv-list{padding:56px 40px!important}
+        }
+        @media(max-width:768px){
+          .sv-hero{padding:16px 24px 40px!important}
+          .sv-list{padding:40px 24px!important}
+          .sv-list>div{gap:48px!important}
+          .sv-h1{font-size:36px!important;margin-bottom:14px!important}
+          .sv-sub{font-size:15px!important}
+        }
+      `}</style>
     </main>
   );
 }

@@ -31,6 +31,7 @@ export default function ServiceDetail({ service, index }: ServiceProps) {
 
   return (
     <motion.div
+      className="sd-row"
       initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7 }}
@@ -38,39 +39,39 @@ export default function ServiceDetail({ service, index }: ServiceProps) {
       style={{
         display: "grid",
         gridTemplateColumns: "1fr 1fr",
-        gap: 80,
+        gap: 72,
         alignItems: "center",
       }}
     >
       {/* Content */}
       <motion.div
+        className="sd-content"
         initial={{ opacity: 0, x: isEven ? -30 : 30 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7 }}
         viewport={{ once: true }}
         style={{ order: isEven ? 1 : 2 }}
       >
-        <div style={{ marginBottom: 28 }}>
+        <div style={{ marginBottom: 24 }}>
           <Icon size={40} strokeWidth={1.5} style={{ color: "#0066FF" }} />
         </div>
-        <span style={{ color: "#0066FF", fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", display: "block", marginBottom: 16 }}>
+        <span style={{ color: "#0066FF", fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", display: "block", marginBottom: 14 }}>
           {service.name}
         </span>
 
-        <h2 style={{ fontSize: 48, fontWeight: 800, color: "#0A1929", marginBottom: 28, lineHeight: 1.15, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
+        <h2 className="sd-h2" style={{ fontSize: 44, fontWeight: 800, color: "#0A1929", marginBottom: 24, lineHeight: 1.15, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
           {service.title}
         </h2>
 
-        <p style={{ fontSize: 17, color: "#64748B", lineHeight: 1.8, marginBottom: 44 }}>
+        <p style={{ fontSize: 16, color: "#64748B", lineHeight: 1.8, marginBottom: 36 }}>
           {service.desc}
         </p>
 
-        {/* Benefits Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+        <div className="sd-benefits" style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 14 }}>
           {service.benefits.map((benefit) => (
-            <div key={benefit} style={{ display: "flex", alignItems: "flex-start", gap: 12 }}>
-              <span style={{ color: "#0066FF", fontWeight: 700, fontSize: 16, lineHeight: 1.2, marginTop: 2, flexShrink: 0 }}>▸</span>
-              <span style={{ color: "#475569", fontSize: 15, lineHeight: 1.6 }}>{benefit}</span>
+            <div key={benefit} style={{ display: "flex", alignItems: "flex-start", gap: 10 }}>
+              <span style={{ color: "#0066FF", fontWeight: 700, fontSize: 15, lineHeight: 1.2, marginTop: 2, flexShrink: 0 }}>▸</span>
+              <span style={{ color: "#475569", fontSize: 14, lineHeight: 1.6 }}>{benefit}</span>
             </div>
           ))}
         </div>
@@ -78,6 +79,7 @@ export default function ServiceDetail({ service, index }: ServiceProps) {
 
       {/* Image */}
       <motion.div
+        className="sd-img"
         initial={{ opacity: 0, x: isEven ? 30 : -30 }}
         whileInView={{ opacity: 1, x: 0 }}
         transition={{ duration: 0.7, delay: 0.1 }}
@@ -91,7 +93,19 @@ export default function ServiceDetail({ service, index }: ServiceProps) {
         />
       </motion.div>
 
-      <style>{`@media(max-width:768px){div{grid-template-columns:1fr!important;gap:48px!important}}`}</style>
+      <style>{`
+        @media(max-width:1024px){
+          .sd-row{gap:48px!important}
+          .sd-h2{font-size:36px!important}
+        }
+        @media(max-width:768px){
+          .sd-row{grid-template-columns:1fr!important;gap:32px!important}
+          .sd-content{order:1!important}
+          .sd-img{order:2!important;aspect-ratio:16/9!important}
+          .sd-h2{font-size:28px!important;margin-bottom:16px!important}
+          .sd-benefits{grid-template-columns:1fr!important;gap:10px!important}
+        }
+      `}</style>
     </motion.div>
   );
 }

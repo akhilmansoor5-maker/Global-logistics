@@ -12,46 +12,36 @@ export default function Hero() {
       position: "relative",
       overflow: "hidden"
     }}>
-      {/* Subtle accent circle */}
       <div style={{
-        position: "absolute",
-        top: -100,
-        right: -100,
-        width: 300,
-        height: 300,
-        borderRadius: "50%",
+        position: "absolute", top: -100, right: -100, width: 300, height: 300, borderRadius: "50%",
         background: "radial-gradient(circle, rgba(0,102,255,0.08) 0%, rgba(0,102,255,0) 70%)",
         pointerEvents: "none",
       }} />
 
-      <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 60px", display: "grid", gridTemplateColumns: "1fr 1.1fr", gap: 100, alignItems: "center", position: "relative", zIndex: 1 }}>
+      <div className="hero-grid" style={{ maxWidth: 1400, margin: "0 auto", padding: "0 60px", display: "grid", gridTemplateColumns: "1fr 1.1fr", gap: 100, alignItems: "center", position: "relative", zIndex: 1 }}>
 
-        {/* Content — LEFT SIDE */}
         <motion.div
           initial={{ opacity: 0, x: -30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, ease: [0.22, 1, 0.36, 1] }}
         >
-          {/* Label */}
-          <div style={{ display: "inline-flex", alignItems: "center", gap: 10, marginBottom: 24, paddingBottom: 12, borderBottom: "2px solid rgba(0,102,255,0.3)" }}>
+          <div className="hero-label" style={{ display: "inline-flex", alignItems: "center", gap: 10, marginBottom: 24, paddingBottom: 12, borderBottom: "2px solid rgba(0,102,255,0.3)" }}>
             <div style={{ width: 8, height: 8, borderRadius: "50%", background: "#0066FF" }}/>
             <span style={{ color: "#0066FF", fontSize: 11, fontWeight: 700, letterSpacing: "0.15em", textTransform: "uppercase" }}>
               Global Logistics. Local Expertise.
             </span>
           </div>
 
-          {/* Headline - Refined and powerful */}
-          <h1 style={{ fontSize: 72, fontWeight: 900, color: "#0A1929", marginBottom: 28, lineHeight: 1.08, letterSpacing: "-0.02em", fontFamily: "var(--font-inter-tight,sans-serif)" }}>
+          <h1 className="hero-h1" style={{ fontSize: 72, fontWeight: 900, color: "#0A1929", marginBottom: 28, lineHeight: 1.08, letterSpacing: "-0.02em", fontFamily: "var(--font-inter-tight,sans-serif)" }}>
             Move global cargo with <span style={{ color: "#0066FF" }}>confidence</span>
           </h1>
 
-          {/* Subtitle */}
-          <p style={{ fontSize: 16, color: "#64748B", lineHeight: 1.7, marginBottom: 48, maxWidth: 520 }}>
+          <p className="hero-sub" style={{ fontSize: 16, color: "#64748B", lineHeight: 1.7, marginBottom: 48, maxWidth: 520 }}>
             Air, sea, and land freight. Customs clearance. Real-time tracking. Licensed for every market. Trusted by 1000+ businesses.
           </p>
 
-          {/* CTA Button */}
           <motion.div
+            className="hero-btns"
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
@@ -63,7 +53,7 @@ export default function Hero() {
               onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-3px)"; e.currentTarget.style.boxShadow = "0 16px 40px rgba(0,102,255,0.4)"; }}
               onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "0 8px 24px rgba(0,102,255,0.3)"; }}
             >
-              Let's Move Your Cargo <ArrowRight size={18} strokeWidth={1.5} />
+              Let&apos;s Move Your Cargo <ArrowRight size={18} strokeWidth={1.5} />
             </a>
             <a
               href="tel:+96896995001"
@@ -76,8 +66,8 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Image — RIGHT SIDE */}
         <motion.div
+          className="hero-img"
           initial={{ opacity: 0, x: 30 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.7, delay: 0.1, ease: [0.22, 1, 0.36, 1] }}
@@ -91,7 +81,19 @@ export default function Hero() {
         </motion.div>
       </div>
 
-      <style>{`@media(max-width:768px){section>div{grid-template-columns:1fr!important;gap:48px!important;padding:0 40px!important}h1{font-size:48px!important;line-height:1.1!important}}`}</style>
+      <style>{`
+        @media(max-width:1024px){
+          .hero-grid{grid-template-columns:1fr!important;gap:40px!important;padding:0 40px!important}
+          .hero-img{display:none!important}
+        }
+        @media(max-width:768px){
+          .hero-grid{padding:0 24px!important}
+          .hero-h1{font-size:38px!important;line-height:1.1!important;margin-bottom:20px!important}
+          .hero-sub{font-size:14px!important;margin-bottom:32px!important}
+          .hero-btns{flex-direction:column!important;gap:12px!important}
+          .hero-btns a{justify-content:center!important;padding:13px 24px!important}
+        }
+      `}</style>
     </section>
   );
 }

@@ -1,9 +1,12 @@
+"use client";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { motion } from "framer-motion";
+import { ShieldCheck, Users, Globe, Clock3 } from "lucide-react";
 
 export const metadata = {
   title: "About | Globe Logistic",
-  description: "Learn about Globe Logistic Service LLC and our mission in logistics.",
+  description: "Enterprise logistics provider serving importers, exporters, and manufacturers across the GCC.",
 };
 
 export default function About() {
@@ -11,37 +14,151 @@ export default function About() {
     <>
       <Navbar />
       <main>
-        <section style={{ background: "#fff", paddingTop: 120, paddingBottom: 100 }}>
+        {/* Hero Section */}
+        <section style={{ background: "#fff", paddingTop: 80, paddingBottom: 80, borderBottom: "1px solid #E5E7EB" }}>
           <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
-            <h1 style={{ fontSize: 48, fontWeight: 900, color: "#0A1929", marginBottom: 32, lineHeight: 1.1, fontFamily: "var(--font-inter-tight,sans-serif)" }}>
-              About Globe Logistic
-            </h1>
-            <div style={{ maxWidth: 800, color: "#475569", fontSize: 16, lineHeight: 1.8 }}>
-              <p style={{ marginBottom: 24 }}>
-                Globe Logistic Service LLC is a premier logistics provider headquartered in Muscat, Oman. Since our founding, we have been committed to delivering exceptional freight and supply chain solutions across air, sea, and land transportation.
+            <motion.div
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+            >
+              <h1 style={{ fontSize: 56, fontWeight: 800, color: "#0A1929", marginBottom: 24, lineHeight: 1.15, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
+                Enterprise Logistics. Regional Excellence.
+              </h1>
+              <p style={{ fontSize: 18, color: "#64748B", lineHeight: 1.7, maxWidth: 600 }}>
+                We move cargo for importers, exporters, and manufacturers across the GCC and beyond with reliability, transparency, and precision.
               </p>
-              <p style={{ marginBottom: 24 }}>
-                With over 10 years of industry experience, we serve more than 1,000 businesses across the GCC and beyond. Our team of certified professionals specializes in customs clearance, dangerous goods handling, pharmaceutical logistics, and complex project cargo management.
-              </p>
-              <p style={{ marginBottom: 24 }}>
-                We believe in combining deep regional expertise with a powerful global network. Every shipment is handled with precision, every deadline is met with reliability, and every client receives the white-glove service they deserve.
-              </p>
-              <h2 style={{ fontSize: 28, fontWeight: 800, color: "#0A1929", marginTop: 48, marginBottom: 20 }}>
-                Our Mission
-              </h2>
-              <p style={{ marginBottom: 24 }}>
-                To connect global trade without limits—providing seamless, reliable logistics solutions that empower businesses to reach new markets with confidence.
-              </p>
-              <h2 style={{ fontSize: 28, fontWeight: 800, color: "#0A1929", marginTop: 48, marginBottom: 20 }}>
-                Why Choose Us
-              </h2>
-              <ul style={{ marginBottom: 24, paddingLeft: 24 }}>
-                <li style={{ marginBottom: 12 }}>✓ Licensed freight forwarder and customs broker in Oman</li>
-                <li style={{ marginBottom: 12 }}>✓ IATA certified for air cargo operations</li>
-                <li style={{ marginBottom: 12 }}>✓ 24/7 customer support and real-time tracking</li>
-                <li style={{ marginBottom: 12 }}>✓ Expertise in dangerous goods, pharmaceuticals, and project cargo</li>
-                <li style={{ marginBottom: 12 }}>✓ Global network spanning 50+ countries</li>
-              </ul>
+            </motion.div>
+          </div>
+        </section>
+
+        {/* Story Section */}
+        <section style={{ background: "#F8F9FA", paddingTop: 100, paddingBottom: 100, borderBottom: "1px solid #E5E7EB" }}>
+          <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
+            <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "start" }}>
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 style={{ fontSize: 40, fontWeight: 800, color: "#0A1929", marginBottom: 28, lineHeight: 1.2, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
+                  Our Story
+                </h2>
+                <div style={{ color: "#64748B", fontSize: 15, lineHeight: 1.8 }}>
+                  <p style={{ marginBottom: 20 }}>
+                    Globe Logistic Service LLC was founded with one mission: to bring world-class logistics infrastructure to the Sultanate of Oman. Today, we're trusted by 1,000+ businesses across the GCC.
+                  </p>
+                  <p style={{ marginBottom: 20 }}>
+                    Our team of licensed freight forwarders and customs brokers specializes in air, sea, and land freight—including dangerous goods, pharmaceuticals, and complex project cargo.
+                  </p>
+                  <p>
+                    We combine deep regional expertise with global partnerships to deliver reliable, transparent, and cost-effective logistics solutions.
+                  </p>
+                </div>
+              </motion.div>
+
+              <motion.div
+                initial={{ opacity: 0, x: 20 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                transition={{ duration: 0.6 }}
+                viewport={{ once: true }}
+              >
+                <h2 style={{ fontSize: 40, fontWeight: 800, color: "#0A1929", marginBottom: 28, lineHeight: 1.2, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
+                  Our Mission
+                </h2>
+                <div style={{ background: "#fff", padding: 40, borderRadius: 8, border: "1px solid #E5E7EB" }}>
+                  <p style={{ color: "#64748B", fontSize: 16, lineHeight: 1.8, margin: 0 }}>
+                    Connect global trade without limits by providing seamless, reliable logistics solutions that empower businesses to reach new markets with confidence.
+                  </p>
+                </div>
+              </motion.div>
+            </div>
+          </div>
+        </section>
+
+        {/* Stats Section */}
+        <section style={{ background: "#fff", paddingTop: 100, paddingBottom: 100, borderBottom: "1px solid #E5E7EB" }}>
+          <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              style={{ fontSize: 40, fontWeight: 800, color: "#0A1929", marginBottom: 80, textAlign: "center", lineHeight: 1.2, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}
+            >
+              By The Numbers
+            </motion.h2>
+
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 32 }}>
+              {[
+                { number: "10+", label: "Years Industry Experience" },
+                { number: "50+", label: "Countries Connected" },
+                { number: "1000+", label: "Enterprise Clients" },
+                { number: "24/7", label: "Operations Support" },
+              ].map((stat, i) => (
+                <motion.div
+                  key={i}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.5, delay: i * 0.1 }}
+                  viewport={{ once: true }}
+                  style={{ textAlign: "center" }}
+                >
+                  <div style={{ fontSize: 48, fontWeight: 800, color: "#0A1929", marginBottom: 12, fontFamily: "var(--font-inter-tight,sans-serif)" }}>
+                    {stat.number}
+                  </div>
+                  <div style={{ fontSize: 14, color: "#64748B", fontWeight: 500 }}>
+                    {stat.label}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </section>
+
+        {/* Why Choose Us */}
+        <section style={{ background: "#F8F9FA", paddingTop: 100, paddingBottom: 100 }}>
+          <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
+            <motion.h2
+              initial={{ opacity: 0, y: 20 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6 }}
+              viewport={{ once: true }}
+              style={{ fontSize: 40, fontWeight: 800, color: "#0A1929", marginBottom: 80, lineHeight: 1.2, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}
+            >
+              Why Businesses Trust Us
+            </motion.h2>
+
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 48 }}>
+              {[
+                { icon: ShieldCheck, title: "Licensed & Compliant", desc: "Oman-certified freight forwarder and customs broker. IATA, IMDG, and pharmaceutical certified." },
+                { icon: Globe, title: "Global Network", desc: "Connected across 50+ countries with trusted partners for seamless cross-border operations." },
+                { icon: Users, title: "Expert Team", desc: "Certified professionals specializing in customs, dangerous goods, pharma, and complex cargo." },
+                { icon: Clock3, title: "24/7 Operations", desc: "Real-time tracking, proactive updates, and round-the-clock customer support." },
+              ].map((item, i) => {
+                const Icon = item.icon;
+                return (
+                  <motion.div
+                    key={i}
+                    initial={{ opacity: 0, y: 20 }}
+                    whileInView={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: i * 0.1 }}
+                    viewport={{ once: true }}
+                    style={{ padding: 32, background: "#fff", borderRadius: 8, border: "1px solid #E5E7EB" }}
+                  >
+                    <div style={{ marginBottom: 20 }}>
+                      <Icon size={28} strokeWidth={1.5} style={{ color: "#0A1929" }} />
+                    </div>
+                    <h3 style={{ fontSize: 18, fontWeight: 700, color: "#0A1929", marginBottom: 12, letterSpacing: "-0.01em" }}>
+                      {item.title}
+                    </h3>
+                    <p style={{ fontSize: 15, color: "#64748B", lineHeight: 1.7, margin: 0 }}>
+                      {item.desc}
+                    </p>
+                  </motion.div>
+                );
+              })}
             </div>
           </div>
         </section>

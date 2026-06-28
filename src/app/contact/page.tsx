@@ -14,8 +14,8 @@ export default function Contact() {
       <Navbar />
       <main>
         {/* Hero */}
-        <section style={{ background: "#fff", paddingTop: 80, paddingBottom: 80, borderBottom: "1px solid #E5E7EB" }}>
-          <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
+        <section style={{ background: "#fff", paddingTop: 28, paddingBottom: 64, borderBottom: "1px solid #E5E7EB" }}>
+          <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 60px" }}>
             <h1 style={{ fontSize: 56, fontWeight: 800, color: "#0A1929", marginBottom: 24, lineHeight: 1.15, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
               Speak With Our Team
             </h1>
@@ -26,8 +26,8 @@ export default function Contact() {
         </section>
 
         {/* Contact Info */}
-        <section style={{ background: "#F8F9FA", paddingTop: 100, paddingBottom: 100, borderBottom: "1px solid #E5E7EB" }}>
-          <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
+        <section style={{ background: "#F8F9FA", paddingTop: 72, paddingBottom: 72, borderBottom: "1px solid #E5E7EB" }}>
+          <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 60px" }}>
             <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 32 }}>
               {[
                 {
@@ -70,7 +70,7 @@ export default function Contact() {
                     }}
                   >
                     <div style={{ marginBottom: 16 }}>
-                      <Icon size={28} strokeWidth={1.5} style={{ color: "#0A1929" }} />
+                      <Icon size={28} strokeWidth={1.5} style={{ color: "#0066FF" }} />
                     </div>
                     <div style={{ fontSize: 12, fontWeight: 600, color: "#64748B", textTransform: "uppercase", letterSpacing: "0.1em", marginBottom: 8 }}>
                       {item.label}
@@ -86,7 +86,7 @@ export default function Contact() {
         </section>
 
         {/* CTA Section */}
-        <section style={{ background: "#fff", paddingTop: 100, paddingBottom: 100 }}>
+        <section style={{ background: "#fff", paddingTop: 72, paddingBottom: 72 }}>
           <div style={{ maxWidth: 800, margin: "0 auto", padding: "0 40px", textAlign: "center" }}>
             <h2 style={{ fontSize: 44, fontWeight: 800, color: "#0A1929", marginBottom: 24, lineHeight: 1.15, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
               Ready to get started?

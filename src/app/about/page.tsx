@@ -13,8 +13,8 @@ export default function About() {
       <Navbar />
       <main>
         {/* Hero Section */}
-        <section style={{ background: "#fff", paddingTop: 80, paddingBottom: 80, borderBottom: "1px solid #E5E7EB" }}>
-          <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
+        <section style={{ background: "#fff", paddingTop: 28, paddingBottom: 64, borderBottom: "1px solid #E5E7EB" }}>
+          <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 60px" }}>
               <h1 style={{ fontSize: 56, fontWeight: 800, color: "#0A1929", marginBottom: 24, lineHeight: 1.15, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
                 Enterprise Logistics. Regional Excellence.
               </h1>
@@ -25,8 +25,8 @@ export default function About() {
         </section>
 
         {/* Story Section */}
-        <section style={{ background: "#F8F9FA", paddingTop: 100, paddingBottom: 100, borderBottom: "1px solid #E5E7EB" }}>
-          <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
+        <section style={{ background: "#F8F9FA", paddingTop: 72, paddingBottom: 72, borderBottom: "1px solid #E5E7EB" }}>
+          <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 60px" }}>
             <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: 80, alignItems: "start" }}>
               <div>
                 <h2 style={{ fontSize: 40, fontWeight: 800, color: "#0A1929", marginBottom: 28, lineHeight: 1.2, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
@@ -60,9 +60,9 @@ export default function About() {
         </section>
 
         {/* Stats Section */}
-        <section style={{ background: "#fff", paddingTop: 100, paddingBottom: 100, borderBottom: "1px solid #E5E7EB" }}>
-          <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
-            <h2 style={{ fontSize: 40, fontWeight: 800, color: "#0A1929", marginBottom: 80, textAlign: "center", lineHeight: 1.2, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
+        <section style={{ background: "#fff", paddingTop: 72, paddingBottom: 72, borderBottom: "1px solid #E5E7EB" }}>
+          <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 60px" }}>
+            <h2 style={{ fontSize: 40, fontWeight: 800, color: "#0A1929", marginBottom: 48, textAlign: "center", lineHeight: 1.2, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
               By The Numbers
             </h2>
 
@@ -87,9 +87,9 @@ export default function About() {
         </section>
 
         {/* Why Choose Us */}
-        <section style={{ background: "#F8F9FA", paddingTop: 100, paddingBottom: 100 }}>
-          <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px" }}>
-            <h2 style={{ fontSize: 40, fontWeight: 800, color: "#0A1929", marginBottom: 80, lineHeight: 1.2, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
+        <section style={{ background: "#F8F9FA", paddingTop: 72, paddingBottom: 72 }}>
+          <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 60px" }}>
+            <h2 style={{ fontSize: 40, fontWeight: 800, color: "#0A1929", marginBottom: 48, lineHeight: 1.2, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
               Why Businesses Trust Us
             </h2>
 
@@ -104,7 +104,7 @@ export default function About() {
                 return (
                   <div key={i} style={{ padding: 32, background: "#fff", borderRadius: 8, border: "1px solid #E5E7EB" }}>
                     <div style={{ marginBottom: 20 }}>
-                      <Icon size={28} strokeWidth={1.5} style={{ color: "#0A1929" }} />
+                      <Icon size={28} strokeWidth={1.5} style={{ color: "#0066FF" }} />
                     </div>
                     <h3 style={{ fontSize: 18, fontWeight: 700, color: "#0A1929", marginBottom: 12, letterSpacing: "-0.01em" }}>
                       {item.title}

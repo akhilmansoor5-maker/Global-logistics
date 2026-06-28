@@ -86,8 +86,8 @@ export default function ServicesPage() {
       <Navbar />
 
       {/* Hero */}
-      <section style={{ background: "linear-gradient(135deg, #fff 0%, #f0f7ff 100%)", padding: "100px 40px 80px", borderBottom: "1px solid #E5E7EB" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+      <section style={{ background: "#fff", padding: "28px 60px 64px", borderBottom: "1px solid #E5E7EB" }}>
+        <div style={{ maxWidth: 1400, margin: "0 auto" }}>
           <div style={{ marginBottom: 20 }}>
             <span style={{ color: "#0066FF", fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase" }}>Our Services</span>
           </div>
@@ -101,13 +101,13 @@ export default function ServicesPage() {
       </section>
 
       {/* Services Grid */}
-      <section style={{ background: "linear-gradient(180deg, #fff 0%, #f8fbff 50%, #fff 100%)", padding: "120px 40px" }}>
-        <div style={{ maxWidth: 1200, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr", gap: 100 }}>
+      <section style={{ background: "#fff", padding: "72px 60px" }}>
+        <div style={{ maxWidth: 1400, margin: "0 auto", display: "grid", gridTemplateColumns: "1fr", gap: 72 }}>
           {SERVICES.map((service, i) => (
             <div key={service.name}>
               <ServiceDetail service={service} index={i} />
               {i < SERVICES.length - 1 && (
-                <div style={{ marginTop: 100, paddingBottom: 0, borderBottom: "1px solid rgba(0,102,255,0.1)" }} />
+                <div style={{ marginTop: 72, paddingBottom: 0, borderBottom: "1px solid rgba(0,102,255,0.1)" }} />
               )}
             </div>
           ))}

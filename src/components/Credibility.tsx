@@ -31,17 +31,17 @@ export default function Credibility() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} style={{ background: "#F8F9FA", padding: "100px 40px", borderTop: "1px solid #E5E7EB" }}>
-      <div style={{ maxWidth: 1200, margin: "0 auto" }}>
+    <section ref={ref} style={{ background: "#fff", padding: "80px 60px", borderTop: "1px solid #E5E7EB" }}>
+      <div style={{ maxWidth: 1400, margin: "0 auto" }}>
 
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          style={{ marginBottom: 80, maxWidth: 700 }}
+          style={{ marginBottom: 56, maxWidth: 800, margin: "0 auto 56px", textAlign: "center" }}
         >
-          <h2 style={{ fontSize: 48, fontWeight: 800, color: "#0A1929", marginBottom: 24, lineHeight: 1.15, fontFamily: "var(--font-inter-tight,sans-serif)" }}>
+          <h2 style={{ fontSize: 56, fontWeight: 800, color: "#0A1929", marginBottom: 24, lineHeight: 1.1, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
             Enterprise logistics, built for scale
           </h2>
           <p style={{ fontSize: 16, color: "#64748B", lineHeight: 1.7 }}>
@@ -50,7 +50,7 @@ export default function Credibility() {
         </motion.div>
 
         {/* Capabilities Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 48 }}>
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 40 }}>
           {CAPABILITIES.map((cap, i) => {
             const Icon = cap.icon;
             return (
@@ -59,9 +59,10 @@ export default function Credibility() {
                 initial={{ opacity: 0, y: 24 }}
                 animate={inView ? { opacity: 1, y: 0 } : {}}
                 transition={{ duration: 0.5, delay: i * 0.1 }}
+                style={{ padding: "36px 32px", background: "#F8F9FA", borderRadius: 8, border: "1px solid #E5E7EB" }}
               >
                 <div style={{ marginBottom: 20 }}>
-                  <Icon size={32} strokeWidth={1.5} style={{ color: "#0A1929" }} />
+                  <Icon size={32} strokeWidth={1.5} style={{ color: "#0066FF" }} />
                 </div>
                 <h3 style={{ fontSize: 20, fontWeight: 700, color: "#0A1929", marginBottom: 12, letterSpacing: "-0.01em" }}>
                   {cap.title}

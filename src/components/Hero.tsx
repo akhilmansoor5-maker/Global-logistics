@@ -6,8 +6,8 @@ export default function Hero() {
   return (
     <section style={{
       background: "linear-gradient(135deg, #fff 0%, #f0f7ff 50%, #fff 100%)",
-      paddingTop: 80,
-      paddingBottom: 100,
+      paddingTop: 28,
+      paddingBottom: 80,
       borderBottom: "1px solid #E5E7EB",
       position: "relative",
       overflow: "hidden"

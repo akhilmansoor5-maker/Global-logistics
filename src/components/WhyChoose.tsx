@@ -26,7 +26,7 @@ export default function WhyChoose() {
   const inView = useInView(ref, { once: true, margin: "-100px" });
 
   return (
-    <section ref={ref} style={{ background: "linear-gradient(180deg, #fff 0%, #f8fbff 50%, #fff 100%)", padding: "120px 60px" }}>
+    <section ref={ref} style={{ background: "#fff", padding: "80px 60px" }}>
       <div style={{ maxWidth: 1400, margin: "0 auto" }}>
 
         {/* Header - Centered */}
@@ -34,7 +34,7 @@ export default function WhyChoose() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          style={{ marginBottom: 100, maxWidth: 800, margin: "0 auto 100px", textAlign: "center" }}
+          style={{ marginBottom: 56, maxWidth: 800, margin: "0 auto 56px", textAlign: "center" }}
         >
           <h2 style={{ fontSize: 56, fontWeight: 800, color: "#0A1929", marginBottom: 24, lineHeight: 1.1, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
             Why businesses choose us

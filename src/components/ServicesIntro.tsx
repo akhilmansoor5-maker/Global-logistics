@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { ArrowRight, Plane, Ship, Truck, FileText, Container } from "lucide-react";
 
 const SERVICES = [
-  { icon: Plane, name: "Air Freight", brief: "Express delivery worldwide" },
+  { icon: Plane, name: "Air Freight", brief: "Express & transshipment solutions" },
   { icon: Ship, name: "Sea Freight", brief: "Economical global shipping" },
   { icon: Truck, name: "Land Freight", brief: "GCC and cross-border coverage" },
   { icon: FileText, name: "Customs Clearance", brief: "Licensed broker expertise" },

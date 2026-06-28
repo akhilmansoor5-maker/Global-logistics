@@ -40,17 +40,12 @@ export default function Navbar() {
         <div className="nb-inner" style={{ maxWidth: 1400, margin: "0 auto", padding: "0 40px", height: "100%", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
 
           {/* Logo */}
-          <a href="/Global-logistics/" style={{ display: "flex", alignItems: "center", gap: 12, textDecoration: "none", flexShrink: 0 }}>
-            <div style={{ width: 32, height: 32, borderRadius: 6, background: "#0A1929", display: "flex", alignItems: "center", justifyContent: "center" }}>
-              <svg viewBox="0 0 18 18" fill="none" width="16" height="16">
-                <circle cx="9" cy="9" r="7.5" stroke="white" strokeWidth="1.5"/>
-                <ellipse cx="9" cy="9" rx="3" ry="7.5" stroke="white" strokeWidth="1" opacity="0.6"/>
-                <line x1="2" y1="9" x2="16" y2="9" stroke="white" strokeWidth="1" opacity="0.5"/>
-              </svg>
-            </div>
-            <div>
-              <div style={{ color: "#0A1929", fontWeight: 700, fontSize: 13, lineHeight: 1.2, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>Globe Logistic</div>
-            </div>
+          <a href="/Global-logistics/" style={{ display: "flex", alignItems: "center", textDecoration: "none", flexShrink: 0 }}>
+            <img
+              src="/Global-logistics/gls-logo.png"
+              alt="Globe Logistic Services LLC"
+              style={{ height: 40, width: "auto", objectFit: "contain" }}
+            />
           </a>
 
           {/* Desktop Nav */}

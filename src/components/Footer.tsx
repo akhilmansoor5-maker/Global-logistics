@@ -9,15 +9,12 @@ export default function Footer() {
 
           {/* Brand */}
           <div>
-            <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 20 }}>
-              <div style={{ width: 32, height: 32, borderRadius: 6, background: "#fff", display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0 }}>
-                <svg viewBox="0 0 18 18" fill="none" width="16" height="16">
-                  <circle cx="9" cy="9" r="7.5" stroke="#0A1929" strokeWidth="1.5"/>
-                  <ellipse cx="9" cy="9" rx="3" ry="7.5" stroke="#0A1929" strokeWidth="1" opacity="0.6"/>
-                  <line x1="2" y1="9" x2="16" y2="9" stroke="#0A1929" strokeWidth="1" opacity="0.5"/>
-                </svg>
-              </div>
-              <div style={{ color: "#fff", fontWeight: 700, fontSize: 14, lineHeight: 1.2, fontFamily: "var(--font-inter-tight,sans-serif)" }}>Globe Logistic</div>
+            <div style={{ marginBottom: 20 }}>
+              <img
+                src="/Global-logistics/gls-logo.png"
+                alt="Globe Logistic Services LLC"
+                style={{ height: 48, width: "auto", objectFit: "contain", filter: "brightness(0) invert(1)" }}
+              />
             </div>
             <p style={{ color: "rgba(255,255,255,0.35)", fontSize: 13, lineHeight: 1.8, marginBottom: 16, maxWidth: 240 }}>
               Enterprise logistics solutions for importers, exporters, and manufacturers.

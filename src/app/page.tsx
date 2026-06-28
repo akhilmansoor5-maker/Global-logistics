@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import WhyChoose from "@/components/WhyChoose";
 import ServicesIntro from "@/components/ServicesIntro";
-import Testimonials from "@/components/Testimonials";
+import Credibility from "@/components/Credibility";
 import CTA from "@/components/CTA";
 import Footer from "@/components/Footer";
 
@@ -13,7 +13,7 @@ export default function Home() {
       <Hero />
       <WhyChoose />
       <ServicesIntro />
-      <Testimonials />
+      <Credibility />
       <CTA />
       <Footer />
     </main>

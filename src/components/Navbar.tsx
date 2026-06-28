@@ -22,46 +22,45 @@ export default function Navbar() {
   return (
     <>
       <motion.header
-        initial={{ y: -68, opacity: 0 }}
+        initial={{ y: -56, opacity: 0 }}
         animate={{ y: 0, opacity: 1 }}
         transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
         style={{
           position: "fixed",
           inset: "0 0 auto",
           zIndex: 50,
-          height: 68,
-          transition: "background 0.3s, border-color 0.3s, box-shadow 0.3s",
-          background: solid ? "#fff" : "rgba(255,255,255,0.95)",
-          borderBottom: solid ? "1px solid #E5E7EB" : "1px solid rgba(0,0,0,0.05)",
-          boxShadow: solid ? "0 1px 3px rgba(0,0,0,0.08)" : "none",
-          backdropFilter: "blur(8px)",
+          height: 56,
+          transition: "background 0.25s, border-color 0.25s, box-shadow 0.25s",
+          background: solid ? "#fff" : "rgba(255,255,255,0.98)",
+          borderBottom: solid ? "1px solid #E5E7EB" : "1px solid rgba(0,0,0,0.04)",
+          boxShadow: solid ? "0 2px 8px rgba(0,0,0,0.04)" : "none",
+          backdropFilter: "blur(10px)",
         }}
       >
         <div style={{ maxWidth: 1200, margin: "0 auto", padding: "0 40px", height: "100%", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
 
           {/* Logo */}
-          <a href="/Global-logistics/" style={{ display: "flex", alignItems: "center", gap: 10, textDecoration: "none" }}>
-            <div style={{ width: 32, height: 32, borderRadius: 8, background: "linear-gradient(135deg,#0066FF,#38BDF8)", display: "flex", alignItems: "center", justifyContent: "center" }}>
+          <a href="/Global-logistics/" style={{ display: "flex", alignItems: "center", gap: 12, textDecoration: "none", flexShrink: 0 }}>
+            <div style={{ width: 32, height: 32, borderRadius: 6, background: "#0A1929", display: "flex", alignItems: "center", justifyContent: "center" }}>
               <svg viewBox="0 0 18 18" fill="none" width="16" height="16">
-                <circle cx="9" cy="9" r="7.5" stroke="white" strokeWidth="1.4"/>
-                <ellipse cx="9" cy="9" rx="3" ry="7.5" stroke="white" strokeWidth="0.9" opacity="0.55"/>
-                <line x1="2" y1="9" x2="16" y2="9" stroke="white" strokeWidth="0.9" opacity="0.45"/>
+                <circle cx="9" cy="9" r="7.5" stroke="white" strokeWidth="1.5"/>
+                <ellipse cx="9" cy="9" rx="3" ry="7.5" stroke="white" strokeWidth="1" opacity="0.6"/>
+                <line x1="2" y1="9" x2="16" y2="9" stroke="white" strokeWidth="1" opacity="0.5"/>
               </svg>
             </div>
             <div>
-              <div style={{ color: "#0A1929", fontWeight: 800, fontSize: 14, lineHeight: 1.2, fontFamily: "var(--font-inter-tight,sans-serif)" }}>Globe Logistic</div>
-              <div style={{ color: "#0066FF", fontSize: 9, fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase" }}>Service LLC</div>
+              <div style={{ color: "#0A1929", fontWeight: 700, fontSize: 13, lineHeight: 1.2, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>Globe Logistic</div>
             </div>
           </a>
 
           {/* Desktop Nav */}
-          <nav style={{ display: "flex", alignItems: "center", gap: 40 }} className="hidden-mobile">
+          <nav style={{ display: "flex", alignItems: "center", gap: 48 }} className="hidden-mobile">
             {NAV.map(n => (
               <a
                 key={n.label}
                 href={n.href}
-                style={{ color: "#64748B", fontSize: 14, fontWeight: 500, textDecoration: "none", transition: "color 0.2s" }}
-                onMouseEnter={e => (e.currentTarget.style.color = "#0066FF")}
+                style={{ color: "#64748B", fontSize: 13, fontWeight: 500, textDecoration: "none", transition: "color 0.2s" }}
+                onMouseEnter={e => (e.currentTarget.style.color = "#0A1929")}
                 onMouseLeave={e => (e.currentTarget.style.color = "#64748B")}
               >
                 {n.label}
@@ -70,20 +69,20 @@ export default function Navbar() {
           </nav>
 
           {/* CTA */}
-          <div style={{ display: "flex", alignItems: "center", gap: 16 }} className="hidden-mobile">
-            <a href="tel:+96896995001" style={{ color: "#94A3B8", fontSize: 13, textDecoration: "none", transition: "color 0.2s" }}
-              onMouseEnter={e => (e.currentTarget.style.color = "#0066FF")}
+          <div style={{ display: "flex", alignItems: "center", gap: 20, flexShrink: 0 }} className="hidden-mobile">
+            <a href="tel:+96896995001" style={{ color: "#94A3B8", fontSize: 12, textDecoration: "none", transition: "color 0.2s", fontWeight: 500 }}
+              onMouseEnter={e => (e.currentTarget.style.color = "#0A1929")}
               onMouseLeave={e => (e.currentTarget.style.color = "#94A3B8")}
             >
               +968 96995001
             </a>
             <a
               href="mailto:sales@gls-oman.com"
-              style={{ background: "#0066FF", color: "#fff", fontSize: 13, fontWeight: 600, padding: "10px 22px", borderRadius: 8, textDecoration: "none", transition: "background 0.2s" }}
-              onMouseEnter={e => (e.currentTarget.style.background = "#0055DD")}
-              onMouseLeave={e => (e.currentTarget.style.background = "#0066FF")}
+              style={{ background: "#0A1929", color: "#fff", fontSize: 13, fontWeight: 600, padding: "10px 22px", borderRadius: 6, textDecoration: "none", transition: "all 0.25s", transform: "translateY(0)" }}
+              onMouseEnter={e => { e.currentTarget.style.transform = "translateY(-1px)"; e.currentTarget.style.boxShadow = "0 8px 20px rgba(10,25,41,0.12)"; }}
+              onMouseLeave={e => { e.currentTarget.style.transform = "translateY(0)"; e.currentTarget.style.boxShadow = "none"; }}
             >
-              Get A Quote
+              Contact Us
             </a>
           </div>
 
@@ -106,7 +105,7 @@ export default function Navbar() {
             animate={{ opacity: 1, y: 0 }}
             exit={{ opacity: 0, y: -16 }}
             transition={{ duration: 0.2 }}
-            style={{ position: "fixed", inset: "68px 0 0", zIndex: 49, background: "#fff", padding: "24px 40px", display: "flex", flexDirection: "column", gap: 0 }}
+            style={{ position: "fixed", inset: "56px 0 0", zIndex: 49, background: "#fff", padding: "24px 40px", display: "flex", flexDirection: "column", gap: 0 }}
           >
             {NAV.map(n => (
               <a
@@ -121,9 +120,9 @@ export default function Navbar() {
             <a
               href="mailto:sales@gls-oman.com"
               onClick={() => setOpen(false)}
-              style={{ marginTop: 20, background: "#0066FF", color: "#fff", textAlign: "center", fontWeight: 700, fontSize: 14, padding: "14px", borderRadius: 8, textDecoration: "none" }}
+              style={{ marginTop: 20, background: "#0A1929", color: "#fff", textAlign: "center", fontWeight: 600, fontSize: 13, padding: "12px", borderRadius: 6, textDecoration: "none" }}
             >
-              Get A Quote
+              Contact Us
             </a>
           </motion.div>
         )}

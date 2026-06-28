@@ -1,14 +1,14 @@
 "use client";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Plane, Ship, Truck, FileText, Container } from "lucide-react";
 
 const SERVICES = [
-  { icon: "✈️", name: "Air Freight", brief: "Speed matters" },
-  { icon: "🚢", name: "Sea Freight", brief: "Cost-effective" },
-  { icon: "🚛", name: "Land Freight", brief: "Regional coverage" },
-  { icon: "📋", name: "Customs", brief: "Expert clearance" },
-  { icon: "⚓", name: "Project Cargo", brief: "Complex solutions" },
+  { icon: Plane, name: "Air Freight", brief: "Express delivery worldwide" },
+  { icon: Ship, name: "Sea Freight", brief: "Economical global shipping" },
+  { icon: Truck, name: "Land Freight", brief: "GCC and cross-border coverage" },
+  { icon: FileText, name: "Customs Clearance", brief: "Licensed broker expertise" },
+  { icon: Container, name: "Project Cargo", brief: "Heavy lift and complex logistics" },
 ];
 
 export default function ServicesIntro() {
@@ -24,63 +24,71 @@ export default function ServicesIntro() {
           initial={{ opacity: 0, y: 20 }}
           animate={inView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.6 }}
-          style={{ marginBottom: 72, maxWidth: 600 }}
+          style={{ marginBottom: 80, maxWidth: 700 }}
         >
-          <h2 style={{ fontSize: 44, fontWeight: 900, color: "#0A1929", marginBottom: 16, lineHeight: 1.12, fontFamily: "var(--font-inter-tight,sans-serif)" }}>
+          <h2 style={{ fontSize: 48, fontWeight: 800, color: "#0A1929", marginBottom: 20, lineHeight: 1.15, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>
             Our Services
           </h2>
-          <p style={{ fontSize: 17, color: "#64748B", lineHeight: 1.75, marginBottom: 32 }}>
-            Complete logistics solutions tailored to your business needs.
+          <p style={{ fontSize: 16, color: "#64748B", lineHeight: 1.7, marginBottom: 32 }}>
+            Comprehensive logistics solutions tailored for importers, exporters, and manufacturers.
           </p>
           <a
             href="/Global-logistics/services"
-            style={{ display: "inline-flex", alignItems: "center", gap: 8, color: "#0066FF", fontWeight: 600, fontSize: 15, textDecoration: "none", transition: "gap 0.3s" }}
+            style={{ display: "inline-flex", alignItems: "center", gap: 10, color: "#0A1929", fontWeight: 600, fontSize: 14, textDecoration: "none", transition: "gap 0.25s" }}
             onMouseEnter={e => (e.currentTarget.style.gap = "16px")}
-            onMouseLeave={e => (e.currentTarget.style.gap = "8px")}
+            onMouseLeave={e => (e.currentTarget.style.gap = "10px")}
           >
-            View All Services <ArrowRight size={18} />
+            Explore Our Services <ArrowRight size={18} strokeWidth={1.5} />
           </a>
         </motion.div>
 
         {/* Grid */}
-        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: 24 }}>
-          {SERVICES.map((s, i) => (
-            <motion.a
-              key={s.name}
-              href="/Global-logistics/services"
-              initial={{ opacity: 0, y: 24 }}
-              animate={inView ? { opacity: 1, y: 0 } : {}}
-              transition={{ duration: 0.5, delay: i * 0.08 }}
-              style={{
-                padding: 36,
-                background: "#F9FAFB",
-                borderRadius: 12,
-                border: "1px solid #E5E7EB",
-                textDecoration: "none",
-                transition: "all 0.3s",
-                cursor: "pointer",
-                display: "flex",
-                flexDirection: "column",
-                gap: 12,
-              }}
-              onMouseEnter={e => {
-                (e.currentTarget as HTMLAnchorElement).style.borderColor = "#0066FF";
-                (e.currentTarget as HTMLAnchorElement).style.background = "#EFF6FF";
-                (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 8px 32px rgba(0,102,255,0.08)";
-                (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-4px)";
-              }}
-              onMouseLeave={e => {
-                (e.currentTarget as HTMLAnchorElement).style.borderColor = "#E5E7EB";
-                (e.currentTarget as HTMLAnchorElement).style.background = "#F9FAFB";
-                (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none";
-                (e.currentTarget as HTMLAnchorElement).style.transform = "none";
-              }}
-            >
-              <div style={{ fontSize: 40 }}>{s.icon}</div>
-              <h3 style={{ fontSize: 18, fontWeight: 800, color: "#0A1929", margin: 0 }}>{s.name}</h3>
-              <p style={{ fontSize: 14, color: "#94A3B8", margin: 0 }}>{s.brief}</p>
-            </motion.a>
-          ))}
+        <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(260px, 1fr))", gap: 32 }}>
+          {SERVICES.map((s, i) => {
+            const Icon = s.icon;
+            return (
+              <motion.a
+                key={s.name}
+                href="/Global-logistics/services"
+                initial={{ opacity: 0, y: 24 }}
+                animate={inView ? { opacity: 1, y: 0 } : {}}
+                transition={{ duration: 0.5, delay: i * 0.08 }}
+                style={{
+                  padding: 32,
+                  background: "#fff",
+                  borderRadius: 8,
+                  border: "1px solid #E5E7EB",
+                  textDecoration: "none",
+                  transition: "all 0.25s",
+                  cursor: "pointer",
+                  display: "flex",
+                  flexDirection: "column",
+                  gap: 16,
+                  transform: "translateY(0)",
+                }}
+                onMouseEnter={e => {
+                  (e.currentTarget as HTMLAnchorElement).style.borderColor = "#0A1929";
+                  (e.currentTarget as HTMLAnchorElement).style.background = "#F8F9FA";
+                  (e.currentTarget as HTMLAnchorElement).style.boxShadow = "0 8px 24px rgba(0,0,0,0.06)";
+                  (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(-3px)";
+                }}
+                onMouseLeave={e => {
+                  (e.currentTarget as HTMLAnchorElement).style.borderColor = "#E5E7EB";
+                  (e.currentTarget as HTMLAnchorElement).style.background = "#fff";
+                  (e.currentTarget as HTMLAnchorElement).style.boxShadow = "none";
+                  (e.currentTarget as HTMLAnchorElement).style.transform = "translateY(0)";
+                }}
+              >
+                <div>
+                  <Icon size={28} strokeWidth={1.5} style={{ color: "#0A1929" }} />
+                </div>
+                <div>
+                  <h3 style={{ fontSize: 17, fontWeight: 700, color: "#0A1929", margin: 0, letterSpacing: "-0.01em" }}>{s.name}</h3>
+                  <p style={{ fontSize: 13, color: "#94A3B8", margin: "8px 0 0 0" }}>{s.brief}</p>
+                </div>
+              </motion.a>
+            );
+          })}
         </div>
       </div>
 

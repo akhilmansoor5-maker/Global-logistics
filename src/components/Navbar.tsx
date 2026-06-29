@@ -31,21 +31,15 @@ export default function Navbar() {
           zIndex: 50,
           height: 64,
           transition: "background 0.3s, border-color 0.3s, box-shadow 0.3s",
-          background: solid
-            ? "rgba(4,8,15,0.85)"
-            : "rgba(4,8,15,0.4)",
-          borderBottom: solid
-            ? "1px solid rgba(255,255,255,0.08)"
-            : "1px solid rgba(255,255,255,0.04)",
-          boxShadow: solid ? "0 8px 40px rgba(0,0,0,0.5)" : "none",
-          backdropFilter: "blur(24px)",
-          WebkitBackdropFilter: "blur(24px)",
+          background: "#fff",
+          borderBottom: "1px solid rgba(0,0,0,0.08)",
+          boxShadow: solid ? "0 2px 8px rgba(0,0,0,0.08)" : "none",
         }}
       >
         <div className="nb-inner" style={{ maxWidth: 1400, margin: "0 auto", padding: "0 48px", height: "100%", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
 
           {/* Logo */}
-          <a href="/Global-logistics/" style={{ display: "flex", alignItems: "center", textDecoration: "none", flexShrink: 0, mixBlendMode: "screen" }}>
+          <a href="/Global-logistics/" style={{ display: "flex", alignItems: "center", textDecoration: "none", flexShrink: 0 }}>
             <div style={{ height: 34, overflow: "hidden", display: "flex", alignItems: "flex-start" }}>
               <img
                 src="/Global-logistics/gls-logo.png"
@@ -53,7 +47,6 @@ export default function Navbar() {
                 style={{
                   height: 56,
                   width: "auto",
-                  filter: "invert(1) grayscale(1) brightness(10)",
                   display: "block",
                   flexShrink: 0,
                 }}
@@ -67,9 +60,9 @@ export default function Navbar() {
               <a
                 key={n.label}
                 href={n.href}
-                style={{ color: "rgba(255,255,255,0.5)", fontSize: 13.5, fontWeight: 500, textDecoration: "none", transition: "color 0.2s", letterSpacing: "0.01em" }}
-                onMouseEnter={e => (e.currentTarget.style.color = "#fff")}
-                onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.5)")}
+                style={{ color: "rgba(0,0,0,0.6)", fontSize: 13.5, fontWeight: 500, textDecoration: "none", transition: "color 0.2s", letterSpacing: "0.01em" }}
+                onMouseEnter={e => (e.currentTarget.style.color = "#000")}
+                onMouseLeave={e => (e.currentTarget.style.color = "rgba(0,0,0,0.6)")}
               >
                 {n.label}
               </a>
@@ -78,9 +71,9 @@ export default function Navbar() {
 
           {/* CTA */}
           <div style={{ display: "flex", alignItems: "center", gap: 20, flexShrink: 0 }} className="hidden-mobile">
-            <a href="tel:+96896995001" style={{ color: "rgba(255,255,255,0.35)", fontSize: 12.5, textDecoration: "none", transition: "color 0.2s", fontWeight: 500 }}
-              onMouseEnter={e => (e.currentTarget.style.color = "rgba(255,255,255,0.8)")}
-              onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.35)")}
+            <a href="tel:+96896995001" style={{ color: "rgba(0,0,0,0.5)", fontSize: 12.5, textDecoration: "none", transition: "color 0.2s", fontWeight: 500 }}
+              onMouseEnter={e => (e.currentTarget.style.color = "#000")}
+              onMouseLeave={e => (e.currentTarget.style.color = "rgba(0,0,0,0.5)")}
             >
               +968 96995001
             </a>
@@ -109,7 +102,7 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setOpen(!open)}
-            style={{ display: "none", color: "rgba(255,255,255,0.8)", background: "rgba(255,255,255,0.06)", border: "1px solid rgba(255,255,255,0.1)", borderRadius: 8, cursor: "pointer", padding: 8, lineHeight: 0 }}
+            style={{ display: "none", color: "rgba(0,0,0,0.7)", background: "rgba(0,0,0,0.06)", border: "1px solid rgba(0,0,0,0.1)", borderRadius: 8, cursor: "pointer", padding: 8, lineHeight: 0 }}
             className="show-mobile"
           >
             {open ? <X size={20} /> : <Menu size={20} />}
@@ -129,14 +122,12 @@ export default function Navbar() {
               position: "fixed",
               inset: "64px 0 0",
               zIndex: 49,
-              background: "rgba(4,8,15,0.97)",
-              backdropFilter: "blur(24px)",
-              WebkitBackdropFilter: "blur(24px)",
+              background: "#fff",
               padding: "28px 24px",
               display: "flex",
               flexDirection: "column",
               gap: 0,
-              borderTop: "1px solid rgba(255,255,255,0.06)",
+              borderTop: "1px solid rgba(0,0,0,0.08)",
             }}
           >
             {NAV.map(n => (
@@ -144,7 +135,7 @@ export default function Navbar() {
                 key={n.label}
                 href={n.href}
                 onClick={() => setOpen(false)}
-                style={{ color: "rgba(255,255,255,0.7)", fontSize: 17, fontWeight: 600, padding: "18px 0", borderBottom: "1px solid rgba(255,255,255,0.06)", textDecoration: "none", letterSpacing: "-0.01em" }}
+                style={{ color: "rgba(0,0,0,0.7)", fontSize: 17, fontWeight: 600, padding: "18px 0", borderBottom: "1px solid rgba(0,0,0,0.08)", textDecoration: "none", letterSpacing: "-0.01em" }}
               >
                 {n.label}
               </a>

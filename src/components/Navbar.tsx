@@ -45,18 +45,20 @@ export default function Navbar() {
         <div className="nb-inner" style={{ maxWidth: 1400, margin: "0 auto", padding: "0 48px", height: "100%", display: "flex", alignItems: "center", justifyContent: "space-between" }}>
 
           {/* Logo */}
-          <a href="/Global-logistics/" style={{ display: "flex", alignItems: "center", textDecoration: "none", flexShrink: 0 }}>
-            <img
-              src="/Global-logistics/gls-logo.png"
-              alt="Globe Logistic Services LLC"
-              style={{
-                height: 52,
-                width: "auto",
-                objectFit: "contain",
-                filter: "invert(1) grayscale(1) brightness(10)",
-                mixBlendMode: "screen",
-              }}
-            />
+          <a href="/Global-logistics/" style={{ display: "flex", alignItems: "center", textDecoration: "none", flexShrink: 0, mixBlendMode: "screen" }}>
+            <div style={{ height: 52, overflow: "hidden", display: "flex", alignItems: "flex-start" }}>
+              <img
+                src="/Global-logistics/gls-logo.png"
+                alt="Globe Logistic Services LLC"
+                style={{
+                  height: 68,
+                  width: "auto",
+                  filter: "invert(1) grayscale(1) brightness(10)",
+                  display: "block",
+                  flexShrink: 0,
+                }}
+              />
+            </div>
           </a>
 
           {/* Desktop Nav */}

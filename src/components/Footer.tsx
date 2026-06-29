@@ -17,7 +17,13 @@ export default function Footer() {
               <img
                 src="/Global-logistics/gls-logo.png"
                 alt="Globe Logistic Services LLC"
-                style={{ height: 40, width: "auto", objectFit: "contain", filter: "brightness(0) invert(1)", opacity: 0.85 }}
+                style={{
+                  height: 52,
+                  width: "auto",
+                  objectFit: "contain",
+                  filter: "invert(1) grayscale(1) brightness(10)",
+                  mixBlendMode: "screen",
+                }}
               />
             </div>
             <p style={{ color: "rgba(255,255,255,0.28)", fontSize: 13, lineHeight: 1.85, marginBottom: 20, maxWidth: 240 }}>

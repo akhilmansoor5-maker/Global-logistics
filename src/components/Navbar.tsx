@@ -50,7 +50,7 @@ export default function Navbar() {
               src="/Global-logistics/gls-logo.png"
               alt="Globe Logistic Services LLC"
               style={{
-                height: 40,
+                height: 52,
                 width: "auto",
                 objectFit: "contain",
                 filter: "invert(1) grayscale(1) brightness(10)",

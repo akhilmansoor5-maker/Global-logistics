@@ -14,12 +14,12 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div style={{ marginBottom: 20 }}>
-              <div style={{ height: 40, overflow: "hidden", display: "flex", alignItems: "flex-start", mixBlendMode: "screen" }}>
+              <div style={{ height: 34, overflow: "hidden", display: "flex", alignItems: "flex-start", mixBlendMode: "screen" }}>
                 <img
                   src="/Global-logistics/gls-logo.png"
                   alt="Globe Logistic Services LLC"
                   style={{
-                    height: 66,
+                    height: 56,
                     width: "auto",
                     filter: "invert(1) grayscale(1) brightness(10)",
                     display: "block",

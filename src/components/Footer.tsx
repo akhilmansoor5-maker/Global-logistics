@@ -52,7 +52,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <div style={{ color: "#fff", fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 20 }}>Company</div>
+            <div style={{ color: "#000", fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 20 }}>Company</div>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 13 }}>
               {[
                 { label: "About", href: "/Global-logistics/about" },

@@ -37,13 +37,13 @@ export default function Footer() {
 
           {/* Services */}
           <div>
-            <div style={{ color: "#fff", fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 20 }}>Services</div>
+            <div style={{ color: "#000", fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 20 }}>Services</div>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 13 }}>
               {["Air Freight", "Sea Freight", "Land Freight", "Customs Clearance", "Project Cargo"].map(s => (
                 <li key={s}>
                   <a href="/Global-logistics/services" style={{ color: "rgba(0,0,0,0.65)", fontSize: 13.5, textDecoration: "none", transition: "color 0.2s" }}
-                    onMouseEnter={e => (e.currentTarget.style.color = "#fff")}
-                    onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.65)")}
+                    onMouseEnter={e => (e.currentTarget.style.color = "#000")}
+                    onMouseLeave={e => (e.currentTarget.style.color = "rgba(0,0,0,0.65)")}
                   >{s}</a>
                 </li>
               ))}
@@ -61,8 +61,8 @@ export default function Footer() {
               ].map(s => (
                 <li key={s.label}>
                   <a href={s.href} style={{ color: "rgba(0,0,0,0.65)", fontSize: 13.5, textDecoration: "none", transition: "color 0.2s" }}
-                    onMouseEnter={e => (e.currentTarget.style.color = "#fff")}
-                    onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.65)")}
+                    onMouseEnter={e => (e.currentTarget.style.color = "#000")}
+                    onMouseLeave={e => (e.currentTarget.style.color = "rgba(0,0,0,0.65)")}
                   >{s.label}</a>
                 </li>
               ))}

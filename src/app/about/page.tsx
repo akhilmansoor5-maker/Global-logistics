@@ -68,12 +68,11 @@ export default function About() {
               Our <span className="gt">Capabilities</span>
             </h2>
 
-            <div className="ab-stats" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20 }}>
+            <div className="ab-stats" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 20 }}>
               {[
                 { number: "50+", label: "Countries Connected" },
                 { number: "24/7", label: "Operations Support" },
                 { number: "Air · Sea · Land", label: "Freight Modes" },
-                { number: "Licensed", label: "Customs Brokers" },
               ].map((stat, i) => (
                 <div key={i} style={{ textAlign: "center", padding: "36px 24px", background: "rgba(255,255,255,0.04)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", borderRadius: 16, border: "1px solid rgba(255,255,255,0.07)" }}>
                   <div style={{ fontSize: stat.number.length > 5 ? 22 : 44, fontWeight: 800, color: "#93c5fd", marginBottom: 10, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.02em", lineHeight: 1.1 }}>

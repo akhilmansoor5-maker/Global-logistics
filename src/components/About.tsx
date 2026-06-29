@@ -6,7 +6,6 @@ const STATS = [
   { value: "50+",  label: "Countries Served" },
   { value: "24/7", label: "Customer Support" },
   { value: "Air · Sea · Land", label: "Freight Modes" },
-  { value: "Licensed", label: "Customs Brokers" },
 ];
 
 export default function About() {

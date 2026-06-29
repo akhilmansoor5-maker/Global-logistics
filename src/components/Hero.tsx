@@ -4,7 +4,6 @@ import { ArrowRight, Plane, Ship, Truck } from "lucide-react";
 
 const CAPS = [
   { value: "Air · Sea · Land", label: "Freight Modes" },
-  { value: "Licensed", label: "Customs Brokers" },
   { value: "End-to-End", label: "Logistics" },
   { value: "24/7", label: "Operations Support" },
 ];

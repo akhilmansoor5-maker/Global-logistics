@@ -65,18 +65,18 @@ export default function About() {
         <section className="ab-section" style={{ background: "#04080f", paddingTop: 72, paddingBottom: 72 }}>
           <div style={{ maxWidth: 1400, margin: "0 auto", padding: "0 60px" }}>
             <h2 className="ab-h2 ab-center" style={{ fontSize: 40, fontWeight: 800, color: "#fff", marginBottom: 48, textAlign: "center", lineHeight: 1.1, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.03em" }}>
-              By The <span className="gt">Numbers</span>
+              Our <span className="gt">Capabilities</span>
             </h2>
 
             <div className="ab-stats" style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: 20 }}>
               {[
-                { number: "10+", label: "Years Industry Experience" },
                 { number: "50+", label: "Countries Connected" },
-                { number: "1000+", label: "Enterprise Clients" },
                 { number: "24/7", label: "Operations Support" },
+                { number: "Air · Sea · Land", label: "Freight Modes" },
+                { number: "Licensed", label: "Customs Brokers" },
               ].map((stat, i) => (
                 <div key={i} style={{ textAlign: "center", padding: "36px 24px", background: "rgba(255,255,255,0.04)", backdropFilter: "blur(20px)", WebkitBackdropFilter: "blur(20px)", borderRadius: 16, border: "1px solid rgba(255,255,255,0.07)" }}>
-                  <div style={{ fontSize: 44, fontWeight: 800, color: "#93c5fd", marginBottom: 10, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.03em" }}>
+                  <div style={{ fontSize: stat.number.length > 5 ? 22 : 44, fontWeight: 800, color: "#93c5fd", marginBottom: 10, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.02em", lineHeight: 1.1 }}>
                     {stat.number}
                   </div>
                   <div style={{ fontSize: 13, color: "rgba(255,255,255,0.35)", fontWeight: 500 }}>

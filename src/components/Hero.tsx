@@ -2,11 +2,11 @@
 import { motion } from "framer-motion";
 import { ArrowRight, Plane, Ship, Truck } from "lucide-react";
 
-const STATS = [
-  { value: "50+", label: "Countries" },
-  { value: "1K+", label: "Clients" },
-  { value: "10+", label: "Years" },
-  { value: "24/7", label: "Support" },
+const CAPS = [
+  { value: "Air · Sea · Land", label: "Freight Modes" },
+  { value: "Licensed", label: "Customs Brokers" },
+  { value: "End-to-End", label: "Logistics" },
+  { value: "24/7", label: "Operations Support" },
 ];
 
 export default function Hero() {
@@ -93,21 +93,24 @@ export default function Hero() {
             </a>
           </motion.div>
 
-          {/* Stats row */}
+          {/* Capability badges */}
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.45, duration: 0.6 }}
-            className="hero-stats"
-            style={{ display: "flex", gap: 0, borderTop: "1px solid rgba(255,255,255,0.07)" }}
+            className="hero-caps"
+            style={{ display: "flex", flexWrap: "wrap", gap: 10, paddingTop: 28, borderTop: "1px solid rgba(255,255,255,0.07)" }}
           >
-            {STATS.map((s, i) => (
-              <div key={s.label} style={{
-                padding: "20px 28px 0",
-                borderRight: i < STATS.length - 1 ? "1px solid rgba(255,255,255,0.07)" : "none",
+            {CAPS.map((c) => (
+              <div key={c.label} style={{
+                display: "flex", flexDirection: "column", gap: 2,
+                padding: "10px 16px",
+                background: "rgba(255,255,255,0.04)",
+                border: "1px solid rgba(255,255,255,0.08)",
+                borderRadius: 10,
               }}>
-                <div style={{ fontSize: 24, fontWeight: 800, color: "#fff", letterSpacing: "-0.03em", fontFamily: "var(--font-inter-tight,sans-serif)" }}>{s.value}</div>
-                <div style={{ fontSize: 12, color: "rgba(255,255,255,0.35)", marginTop: 2, fontWeight: 500 }}>{s.label}</div>
+                <div style={{ fontSize: 13, fontWeight: 700, color: "#fff", letterSpacing: "-0.01em" }}>{c.value}</div>
+                <div style={{ fontSize: 11, color: "rgba(255,255,255,0.35)", fontWeight: 500 }}>{c.label}</div>
               </div>
             ))}
           </motion.div>
@@ -171,29 +174,6 @@ export default function Hero() {
             ))}
           </motion.div>
 
-          {/* Live badge */}
-          <motion.div
-            animate={{ y: [0, 6, 0] }}
-            transition={{ duration: 3.5, repeat: Infinity, ease: "easeInOut", delay: 0.5 }}
-            style={{
-              position: "absolute",
-              top: 24,
-              right: -20,
-              background: "rgba(10,17,30,0.9)",
-              backdropFilter: "blur(20px)",
-              WebkitBackdropFilter: "blur(20px)",
-              border: "1px solid rgba(255,255,255,0.1)",
-              borderRadius: 12,
-              padding: "12px 18px",
-              boxShadow: "0 16px 32px rgba(0,0,0,0.4)",
-            }}
-          >
-            <div style={{ display: "flex", alignItems: "center", gap: 8 }}>
-              <span className="dot-pulse" style={{ width: 8, height: 8, borderRadius: "50%", background: "#22c55e", display: "inline-block" }} />
-              <span style={{ fontSize: 12, fontWeight: 700, color: "#fff" }}>Live Tracking</span>
-            </div>
-            <div style={{ fontSize: 11, color: "rgba(255,255,255,0.4)", marginTop: 3 }}>Real-time visibility</div>
-          </motion.div>
         </motion.div>
       </div>
 

@@ -4,10 +4,10 @@ import { Plane, Ship, Truck, FileText, Container } from "lucide-react";
 
 const IMAGES: Record<string, string> = {
   "Air Freight":      "https://images.unsplash.com/photo-1436491865332-7a61a109cc05?w=1000&q=80",
-  "Sea Freight":      "https://images.unsplash.com/photo-1578575437130-527eed3abbec?w=1000&q=80",
+  "Sea Freight":      "https://images.unsplash.com/photo-1559827260-dc66d52bef19?w=1000&q=80",
   "Land Freight":     "https://images.unsplash.com/photo-1601584115197-04ecc0da31d7?w=1000&q=80",
-  "Customs Clearance":"https://images.unsplash.com/photo-1529399718985-7a8a4a028f30?w=1000&q=80",
-  "Project Cargo":    "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=1000&q=80",
+  "Customs Clearance":"https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=1000&q=80",
+  "Project Cargo":    "https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=1000&q=80",
 };
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any

@@ -46,12 +46,12 @@ export default function Navbar() {
 
           {/* Logo */}
           <a href="/Global-logistics/" style={{ display: "flex", alignItems: "center", textDecoration: "none", flexShrink: 0, mixBlendMode: "screen" }}>
-            <div style={{ height: 38, overflow: "hidden", display: "flex", alignItems: "flex-start" }}>
+            <div style={{ height: 50, overflow: "hidden", display: "flex", alignItems: "flex-start" }}>
               <img
                 src="/Global-logistics/gls-logo.png"
                 alt="Globe Logistic Services LLC"
                 style={{
-                  height: 72,
+                  height: 82,
                   width: "auto",
                   filter: "invert(1) grayscale(1) brightness(10)",
                   display: "block",

@@ -46,20 +46,17 @@ export default function Navbar() {
 
           {/* Logo */}
           <a href="/Global-logistics/" style={{ display: "flex", alignItems: "center", textDecoration: "none", flexShrink: 0 }}>
-            <div style={{
-              background: "rgba(255,255,255,0.08)",
-              border: "1px solid rgba(255,255,255,0.12)",
-              borderRadius: 10,
-              padding: "5px 10px",
-              display: "flex",
-              alignItems: "center",
-            }}>
-              <img
-                src="/Global-logistics/gls-logo.png"
-                alt="Globe Logistic Services LLC"
-                style={{ height: 32, width: "auto", objectFit: "contain", filter: "brightness(0) invert(1)" }}
-              />
-            </div>
+            <img
+              src="/Global-logistics/gls-logo.png"
+              alt="Globe Logistic Services LLC"
+              style={{
+                height: 40,
+                width: "auto",
+                objectFit: "contain",
+                filter: "invert(1) grayscale(1) brightness(10)",
+                mixBlendMode: "screen",
+              }}
+            />
           </a>
 
           {/* Desktop Nav */}

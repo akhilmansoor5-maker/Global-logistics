@@ -9,7 +9,7 @@ export default function Footer() {
 
       <div className="ft-wrap" style={{ maxWidth: 1400, margin: "0 auto", padding: "72px 60px 40px", position: "relative", zIndex: 1 }}>
 
-        <div className="ft-grid" style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: "48px 40px", paddingBottom: 48, borderBottom: "1px solid rgba(255,255,255,0.06)" }}>
+        <div className="ft-grid" style={{ display: "grid", gridTemplateColumns: "2fr 1fr 1fr 1fr", gap: "48px 40px", paddingBottom: 48, borderBottom: "1px solid rgba(255,255,255,0.1)" }}>
 
           {/* Brand */}
           <div>
@@ -28,23 +28,23 @@ export default function Footer() {
                 />
               </div>
             </div>
-            <p style={{ color: "rgba(255,255,255,0.28)", fontSize: 13, lineHeight: 1.85, marginBottom: 20, maxWidth: 240 }}>
+            <p style={{ color: "rgba(255,255,255,0.7)", fontSize: 13, lineHeight: 1.85, marginBottom: 16, maxWidth: 240 }}>
               Enterprise logistics solutions for importers, exporters, and manufacturers.
             </p>
-            <p style={{ color: "rgba(255,255,255,0.18)", fontSize: 13, lineHeight: 1.85, margin: 0 }}>
+            <p style={{ color: "rgba(255,255,255,0.5)", fontSize: 13, lineHeight: 1.85, margin: 0 }}>
               PC 116, PO BOX 560<br />Ghala, Muscat<br />Sultanate of Oman
             </p>
           </div>
 
           {/* Services */}
           <div>
-            <div style={{ color: "rgba(255,255,255,0.6)", fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 20 }}>Services</div>
+            <div style={{ color: "#fff", fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 20 }}>Services</div>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 13 }}>
               {["Air Freight", "Sea Freight", "Land Freight", "Customs Clearance", "Project Cargo"].map(s => (
                 <li key={s}>
-                  <a href="/Global-logistics/services" style={{ color: "rgba(255,255,255,0.25)", fontSize: 13.5, textDecoration: "none", transition: "color 0.2s" }}
-                    onMouseEnter={e => (e.currentTarget.style.color = "rgba(255,255,255,0.75)")}
-                    onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.25)")}
+                  <a href="/Global-logistics/services" style={{ color: "rgba(255,255,255,0.65)", fontSize: 13.5, textDecoration: "none", transition: "color 0.2s" }}
+                    onMouseEnter={e => (e.currentTarget.style.color = "#fff")}
+                    onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.65)")}
                   >{s}</a>
                 </li>
               ))}
@@ -53,7 +53,7 @@ export default function Footer() {
 
           {/* Company */}
           <div>
-            <div style={{ color: "rgba(255,255,255,0.6)", fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 20 }}>Company</div>
+            <div style={{ color: "#fff", fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 20 }}>Company</div>
             <ul style={{ listStyle: "none", display: "flex", flexDirection: "column", gap: 13 }}>
               {[
                 { label: "About", href: "/Global-logistics/about" },
@@ -61,9 +61,9 @@ export default function Footer() {
                 { label: "Privacy", href: "#" },
               ].map(s => (
                 <li key={s.label}>
-                  <a href={s.href} style={{ color: "rgba(255,255,255,0.25)", fontSize: 13.5, textDecoration: "none", transition: "color 0.2s" }}
-                    onMouseEnter={e => (e.currentTarget.style.color = "rgba(255,255,255,0.75)")}
-                    onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.25)")}
+                  <a href={s.href} style={{ color: "rgba(255,255,255,0.65)", fontSize: 13.5, textDecoration: "none", transition: "color 0.2s" }}
+                    onMouseEnter={e => (e.currentTarget.style.color = "#fff")}
+                    onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.65)")}
                   >{s.label}</a>
                 </li>
               ))}
@@ -72,25 +72,25 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <div style={{ color: "rgba(255,255,255,0.6)", fontSize: 11, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 20 }}>Contact</div>
+            <div style={{ color: "#fff", fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 20 }}>Contact</div>
             <div style={{ display: "flex", flexDirection: "column", gap: 13 }}>
-              <a href="tel:+96896995001" style={{ color: "rgba(255,255,255,0.25)", fontSize: 13.5, textDecoration: "none", transition: "color 0.2s" }}
-                onMouseEnter={e => (e.currentTarget.style.color = "rgba(255,255,255,0.75)")}
-                onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.25)")}
+              <a href="tel:+96896995001" style={{ color: "rgba(255,255,255,0.65)", fontSize: 13.5, textDecoration: "none", transition: "color 0.2s" }}
+                onMouseEnter={e => (e.currentTarget.style.color = "#fff")}
+                onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.65)")}
               >+968 96995001</a>
-              <a href="mailto:sales@gls-oman.com" style={{ color: "rgba(255,255,255,0.25)", fontSize: 13.5, textDecoration: "none", transition: "color 0.2s", wordBreak: "break-all" as const }}
-                onMouseEnter={e => (e.currentTarget.style.color = "rgba(255,255,255,0.75)")}
-                onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.25)")}
+              <a href="mailto:sales@gls-oman.com" style={{ color: "rgba(255,255,255,0.65)", fontSize: 13.5, textDecoration: "none", transition: "color 0.2s", wordBreak: "break-all" as const }}
+                onMouseEnter={e => (e.currentTarget.style.color = "#fff")}
+                onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.65)")}
               >sales@gls-oman.com</a>
             </div>
           </div>
         </div>
 
         <div style={{ paddingTop: 28, display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 12 }}>
-          <div style={{ color: "rgba(255,255,255,0.18)", fontSize: 12 }}>
+          <div style={{ color: "rgba(255,255,255,0.5)", fontSize: 12 }}>
             © {new Date().getFullYear()} Globe Logistic Service LLC. All rights reserved.
           </div>
-          <div style={{ color: "rgba(255,255,255,0.12)", fontSize: 12 }}>
+          <div style={{ color: "rgba(255,255,255,0.4)", fontSize: 12 }}>
             Muscat, Sultanate of Oman
           </div>
         </div>

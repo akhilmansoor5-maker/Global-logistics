@@ -71,15 +71,15 @@ export default function Footer() {
 
           {/* Contact */}
           <div>
-            <div style={{ color: "#fff", fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 20 }}>Contact</div>
+            <div style={{ color: "#000", fontSize: 12, fontWeight: 700, letterSpacing: "0.12em", textTransform: "uppercase", marginBottom: 20 }}>Contact</div>
             <div style={{ display: "flex", flexDirection: "column", gap: 13 }}>
               <a href="tel:+96896995001" style={{ color: "rgba(0,0,0,0.65)", fontSize: 13.5, textDecoration: "none", transition: "color 0.2s" }}
-                onMouseEnter={e => (e.currentTarget.style.color = "#fff")}
-                onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.65)")}
+                onMouseEnter={e => (e.currentTarget.style.color = "#000")}
+                onMouseLeave={e => (e.currentTarget.style.color = "rgba(0,0,0,0.65)")}
               >+968 96995001</a>
               <a href="mailto:sales@gls-oman.com" style={{ color: "rgba(0,0,0,0.65)", fontSize: 13.5, textDecoration: "none", transition: "color 0.2s", wordBreak: "break-all" as const }}
-                onMouseEnter={e => (e.currentTarget.style.color = "#fff")}
-                onMouseLeave={e => (e.currentTarget.style.color = "rgba(255,255,255,0.65)")}
+                onMouseEnter={e => (e.currentTarget.style.color = "#000")}
+                onMouseLeave={e => (e.currentTarget.style.color = "rgba(0,0,0,0.65)")}
               >sales@gls-oman.com</a>
             </div>
           </div>

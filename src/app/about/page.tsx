@@ -36,10 +36,10 @@ export default function About() {
                 </h2>
                 <div style={{ color: "rgba(255,255,255,0.45)", fontSize: 15, lineHeight: 1.85 }}>
                   <p style={{ marginBottom: 20 }}>
-                    Globe Logistic Service LLC was founded with one mission: to bring world-class logistics infrastructure to the Sultanate of Oman. Today, we&apos;re trusted by 1,000+ businesses across the GCC.
+                    Globe Logistic Service LLC is Oman&apos;s licensed freight forwarding and customs brokerage partner, serving importers, exporters, and manufacturers across the GCC and beyond.
                   </p>
                   <p style={{ marginBottom: 20 }}>
-                    Our team of licensed freight forwarders and customs brokers specializes in air, sea, and land freight—including dangerous goods, pharmaceuticals, and complex project cargo.
+                    We provide licensed freight forwarding and customs brokerage services for air, sea, and land shipments, including project cargo.
                   </p>
                   <p>
                     We combine deep regional expertise with global partnerships to deliver reliable, transparent, and cost-effective logistics solutions.
@@ -96,10 +96,10 @@ export default function About() {
 
             <div className="ab-trust" style={{ display: "grid", gridTemplateColumns: "repeat(2, 1fr)", gap: 20 }}>
               {[
-                { icon: ShieldCheck, title: "Licensed & Compliant", desc: "Oman-certified freight forwarder and customs broker. IATA, IMDG, and pharmaceutical certified." },
-                { icon: Globe, title: "Global Network", desc: "Connected across 50+ countries with trusted partners for seamless cross-border operations." },
-                { icon: Users, title: "Expert Team", desc: "Certified professionals specializing in customs, dangerous goods, pharma, and complex cargo." },
-                { icon: Clock3, title: "24/7 Operations", desc: "Real-time tracking, proactive updates, and round-the-clock customer support." },
+                { icon: ShieldCheck, title: "Licensed Freight Forwarder", desc: "Fully licensed and compliant freight forwarding operations in Oman." },
+                { icon: Globe, title: "Global Reach", desc: "Connected partners across multiple countries enabling seamless cross-border operations." },
+                { icon: Users, title: "Expert Team", desc: "Experienced professionals handling customs clearance, documentation, and supply chain logistics." },
+                { icon: Clock3, title: "Responsive Support", desc: "Professional support and proactive communication throughout your shipment journey." },
               ].map((item, i) => {
                 const Icon = item.icon;
                 return (

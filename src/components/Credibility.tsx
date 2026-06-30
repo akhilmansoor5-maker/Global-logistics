@@ -13,7 +13,7 @@ const CAPABILITIES = [
   {
     icon: Building2,
     title: "Licensed Operations",
-    description: "Fully licensed freight forwarder and customs broker in Oman, compliant with IATA, IMDG, and all regulatory requirements.",
+    description: "Fully licensed freight forwarder and customs broker in Oman with professional compliance standards.",
     color: "#38BDF8",
   },
   {
@@ -24,8 +24,8 @@ const CAPABILITIES = [
   },
   {
     icon: ShieldCheck,
-    title: "Enterprise Grade",
-    description: "Handling everything from general cargo to dangerous goods, pharmaceuticals, and complex project cargo with precision.",
+    title: "Diverse Cargo Handling",
+    description: "Experience with general cargo, project freight, and specialized logistics requirements across air, sea, and land modes.",
     color: "#4F8EF7",
   },
 ];

@@ -12,8 +12,8 @@ const REASONS = [
   },
   {
     icon: ShieldCheck,
-    title: "Licensed & Certified",
-    desc: "Oman-licensed freight forwarder and customs broker. IATA, IMDG, and pharmaceutical certified.",
+    title: "Licensed Operations",
+    desc: "Oman-licensed freight forwarder and customs broker with professional compliance standards.",
     color: "#38BDF8",
   },
   {

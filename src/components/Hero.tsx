@@ -47,7 +47,7 @@ export default function Hero() {
           </h1>
 
           <p className="hero-sub" style={{ fontSize: 16.5, color: "rgba(255,255,255,0.5)", lineHeight: 1.75, marginBottom: 44, maxWidth: 500, fontWeight: 400 }}>
-            Air, sea, and land freight. Customs clearance. Real-time tracking. Licensed for every market. Trusted by 1,000+ businesses.
+            Air, sea, and land freight. Customs clearance. Licensed freight forwarding and customs brokerage across the GCC and beyond.
           </p>
 
           <motion.div

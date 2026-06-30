@@ -14,18 +14,16 @@ export default function Footer() {
           {/* Brand */}
           <div>
             <div style={{ marginBottom: 20 }}>
-              <div style={{ height: 34, overflow: "hidden", display: "flex", alignItems: "flex-start" }}>
-                <img
-                  src="/Global-logistics/gls-logo.png"
-                  alt="Globe Logistic Services LLC"
-                  style={{
-                    height: 56,
-                    width: "auto",
-                    display: "block",
-                    flexShrink: 0,
-                  }}
-                />
-              </div>
+              <img
+                src="/Global-logistics/gls-logo.png"
+                alt="Globe Logistic Services LLC"
+                style={{
+                  height: 40,
+                  width: "auto",
+                  display: "block",
+                  flexShrink: 0,
+                }}
+              />
             </div>
             <p style={{ color: "rgba(0,0,0,0.7)", fontSize: 13, lineHeight: 1.85, marginBottom: 16, maxWidth: 240 }}>
               Enterprise logistics solutions for importers, exporters, and manufacturers.

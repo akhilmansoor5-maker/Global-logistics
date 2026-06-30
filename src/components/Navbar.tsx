@@ -40,18 +40,16 @@ export default function Navbar() {
 
           {/* Logo */}
           <a href="/Global-logistics/" style={{ display: "flex", alignItems: "center", textDecoration: "none", flexShrink: 0 }}>
-            <div style={{ height: 34, overflow: "hidden", display: "flex", alignItems: "flex-start" }}>
-              <img
-                src="/Global-logistics/gls-logo.png"
-                alt="Globe Logistic Services LLC"
-                style={{
-                  height: 56,
-                  width: "auto",
-                  display: "block",
-                  flexShrink: 0,
-                }}
-              />
-            </div>
+            <img
+              src="/Global-logistics/gls-logo.png"
+              alt="Globe Logistic Services LLC"
+              style={{
+                height: 40,
+                width: "auto",
+                display: "block",
+                flexShrink: 0,
+              }}
+            />
           </a>
 
           {/* Desktop Nav */}

@@ -18,7 +18,7 @@ export default function Footer() {
                 src="/Global-logistics/gls-logo.png"
                 alt="Globe Logistic Services LLC"
                 style={{
-                  height: 40,
+                  height: 50,
                   width: "auto",
                   display: "block",
                   flexShrink: 0,

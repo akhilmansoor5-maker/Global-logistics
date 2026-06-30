@@ -1,14 +1,15 @@
 "use client";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { Plane, Ship, Truck, FileText, Warehouse, Box } from "lucide-react";
 
 const CARDS = [
-  { icon: "✈", title: "Air Freight",        desc: "Fast, reliable air cargo worldwide. General, DG, pharma, and express shipments." },
-  { icon: "🚢", title: "Sea Freight",        desc: "FCL and LCL ocean freight to every major port. Cost-effective global coverage." },
-  { icon: "🚛", title: "Land Freight",       desc: "Domestic and GCC cross-border trucking. FTL, PTL, and last-mile delivery." },
-  { icon: "📋", title: "Customs Clearance",  desc: "Licensed brokers handling all documentation, compliance, and port formalities." },
-  { icon: "🏭", title: "Warehousing",        desc: "Secure, flexible storage in Oman. Inventory management and distribution services." },
-  { icon: "⚓", title: "Project Cargo",      desc: "Heavy-lift, OOG, and complex project logistics planned and executed precisely." },
+  { icon: Plane, title: "Air Freight",        desc: "Fast, reliable air cargo worldwide. Express shipments and time-sensitive cargo." },
+  { icon: Ship, title: "Sea Freight",        desc: "FCL and LCL ocean freight to every major port. Cost-effective global coverage." },
+  { icon: Truck, title: "Land Freight",       desc: "Domestic and GCC cross-border trucking. FTL, PTL, and last-mile delivery." },
+  { icon: FileText, title: "Customs Clearance",  desc: "Licensed brokers handling all documentation, compliance, and port formalities." },
+  { icon: Warehouse, title: "Warehousing",        desc: "Secure, flexible storage in Oman. Inventory management and distribution services." },
+  { icon: Box, title: "Project Cargo",      desc: "Heavy-lift, oversized, and complex project logistics planned and executed precisely." },
 ];
 
 export default function Services() {
@@ -50,7 +51,9 @@ export default function Services() {
                 (e.currentTarget as HTMLDivElement).style.boxShadow = "none";
               }}
             >
-              <div style={{ fontSize: 28, marginBottom: 20 }}>{c.icon}</div>
+              <div style={{ marginBottom: 20 }}>
+                <c.icon size={28} strokeWidth={1.5} style={{ color: "#0A2540" }} />
+              </div>
               <h3 style={{ fontSize: 17, fontWeight: 700, color: "#0A2540", marginBottom: 12 }}>{c.title}</h3>
               <p style={{ fontSize: 14, color: "#64748B", lineHeight: 1.75 }}>{c.desc}</p>
             </motion.div>

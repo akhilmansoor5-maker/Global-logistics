@@ -1,16 +1,17 @@
 "use client";
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
+import { ShoppingBag, Factory, Package, Truck, Zap, Boxes, ShoppingCart, HardHat } from "lucide-react";
 
 const LIST = [
-  { label: "Retail",          icon: "🛍️", desc: "Consumer goods, fashion & retail distribution" },
-  { label: "Manufacturing",   icon: "⚙️", desc: "Raw materials & finished goods supply chains" },
-  { label: "Pharmaceuticals", icon: "💊", desc: "Cold chain & temperature-sensitive cargo" },
-  { label: "Automotive",      icon: "🚗", desc: "Parts, vehicles & assembly logistics" },
-  { label: "Oil & Gas",       icon: "🛢️", desc: "Project cargo & oilfield equipment" },
-  { label: "FMCG",            icon: "📦", desc: "Fast-moving consumer goods distribution" },
-  { label: "E-Commerce",      icon: "🛒", desc: "Fulfilment, last-mile & returns management" },
-  { label: "Construction",    icon: "🏗️", desc: "Heavy equipment & building materials" },
+  { label: "Retail",          icon: ShoppingBag, desc: "Consumer goods, fashion & retail distribution" },
+  { label: "Manufacturing",   icon: Factory, desc: "Raw materials & finished goods supply chains" },
+  { label: "Healthcare",      icon: Package, desc: "Medical supplies & healthcare logistics" },
+  { label: "Automotive",      icon: Truck, desc: "Parts, vehicles & assembly logistics" },
+  { label: "Energy",          icon: Zap, desc: "Project cargo & equipment distribution" },
+  { label: "FMCG",            icon: Boxes, desc: "Fast-moving consumer goods distribution" },
+  { label: "E-Commerce",      icon: ShoppingCart, desc: "Fulfillment, last-mile & distribution" },
+  { label: "Construction",    icon: HardHat, desc: "Heavy equipment & building materials" },
 ];
 
 export default function Industries() {
@@ -65,7 +66,9 @@ export default function Industries() {
                 (e.currentTarget as HTMLDivElement).style.transform = "translateY(0)";
               }}
             >
-              <div style={{ fontSize: 28, marginBottom: 12, display: "block" }}>{ind.icon}</div>
+              <div style={{ marginBottom: 12, display: "block" }}>
+                <ind.icon size={28} strokeWidth={1.5} style={{ color: "#93c5fd" }} />
+              </div>
               <div style={{ fontSize: 14, fontWeight: 700, color: "#fff", marginBottom: 6, fontFamily: "var(--font-inter-tight,sans-serif)", letterSpacing: "-0.01em" }}>{ind.label}</div>
               <div style={{ fontSize: 12.5, color: "rgba(255,255,255,0.35)", lineHeight: 1.6 }}>{ind.desc}</div>
             </motion.div>
